@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => {
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: '#FBFBFD',
-            position: 'relative'
+            position: 'relative',
         },
 
         introductionSectionGrid: {
@@ -31,6 +31,11 @@ const useStyles = makeStyles(() => {
         appbar: {
             width: '100vw',
             height: '70px',
+        },
+
+        fullGrid: {
+            width: '100%',
+            flex: 1,
         },
 
         toolbar: {
@@ -63,18 +68,29 @@ const useStyles = makeStyles(() => {
         },
 
         section: {
-            padding: '5% 7%',
+            padding: '5% 20%',
             width: '100%',
             background: '#FBFBFD'
         },
 
+        textButton: {
+            color: 'rgba(33, 33, 33, 0.85)'
+        },
+
+        learnMoreButton: {
+            width: '100%',
+            flex: 1,
+            border: '1px solid #eee',
+            color: '#66C56B',
+        },
+
         centeredSection: {
-            padding: '5% 7%',
+            padding: '5% 12%',
             width: '100%',
             background: '#FBFBFD',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
         },
 
         shadowyDiv: {

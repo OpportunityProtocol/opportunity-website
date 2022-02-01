@@ -1,30 +1,33 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import {
   AppBar,
+  Avatar,
   Button,
   Paper,
   Card,
   Grid,
+  Stack,
+  CardActionArea,
+  CardMedia,
+  CardActions,
+  CardContent,
   ThemeProvider,
   Toolbar,
   Typography,
-} from "@mui/material";
-import { themeOptions } from "../material_theme";
-import { useTheme } from "@mui/styles";
-
-import useStyles from "./styles";
-import { ArrowRight } from "@mui/icons-material";
-import MarketDisplay from "../components/MarketDisplay/MarketDisplay";
-import Ticker from 'react-ticker'
-import Footer from "../components/Footer/Footer";
+  Divider,
+} from '@mui/material';
+import { themeOptions } from '../material_theme';
+import Marquee from "react-fast-marquee";
+import useStyles from '../styles/styles';
+import { ArrowRight, KeyboardArrowRight } from '@mui/icons-material';
+import MarketDisplay from '../components/MarketDisplay/MarketDisplay';
+import Footer from '../components/Footer/Footer';
 const MARKETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const BUTTONS = ['Exchange', 'Markets', 'Payouts', 'DAO'];
 
 export default function Home() {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <ThemeProvider theme={themeOptions}>
@@ -37,76 +40,63 @@ export default function Home() {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
         </Head>
 
         <main className={styles.main}>
           {/* Introduction Section */}
           <section className={classes.introductionSection}>
-
             <Paper
-            className={classes.appbarPaper}
+              className={classes.appbarPaper}
               square={true}
               classes={{ outlined: classes.appbar }}
               elevation={0}
-              variant='outlined'
+              variant="outlined"
             >
-                <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-                    <Grid item>
-                      <Typography variant='h6'>
-                        Opportunity
-                      </Typography>
-                    </Grid>
-
-                    <Grid item>
-                        <Grid container item direction='row' alignItems='center'>
-                          <Typography px={1}> 
-                            Blog
-                          </Typography>
-
-                          <Typography px={1}>
-                            FAQ
-                          </Typography>
-
-                          <Typography px={1}>
-                            Contributions
-                          </Typography>
-                        </Grid>
-                    </Grid>
-
-                    <Grid item>
-                        <Button variant='outlined' color='secondary'>
-                          Go to Application
-                        </Button>
-                    </Grid>
+              <Grid container direction="row" justifyContent="space-between" alignItems="center">
+                <Grid item>
+                  <Typography variant="h6">Opportunity</Typography>
                 </Grid>
+
+              </Grid>
             </Paper>
+            <Paper elevation={0} sx={{ color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100vw ', height: 50, background: 'rgb(170,226,173)',
+background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 25%, rgba(161,241,166,1) 100%)' }}>
+  <Typography fontWeight='regular'>
+      Read the whitepaper (coming soon)
+  </Typography>
+</Paper>
             <Grid
               className={classes.introductionSectionGrid}
               container
-              wrap='wrap'
+              wrap="wrap"
               direction="column"
               alignItems="center"
               justifyContent="space-evenly"
             >
-                        <div className={classes.backgroundImageContainer}>
-              <img className={classes.backgroundImage} src='/world.png' />
-            </div>
+              <div className={classes.backgroundImageContainer}>
+                <img className={classes.backgroundImage} src="/world.png" />
+              </div>
 
               <Grid item>
                 <div className={classes.introductionTextContainer}>
                   <Typography
                     py={2}
-                    variant="h1"
+                    
                     textAlign="center"
-                    fontSize={40}
+                    fontSize={50}
                     color="rgba(33, 33, 33, .85)"
-                    fontWeight="bold"
+                    fontWeight="medium"
                   >
-                    Making money shouldn't be a <span style={{ color: 'rgba(102, 197, 107, .85)' }} fontWeight="bold" variant="h1" fontSize={40}>privilege</span>
+                    Making money shouldn't be a &nbsp;
+                    <span
+                      style={{ color: 'rgba(102, 197, 107, .85)' }}
+                      fontWeight="bold"
+                      variant="h1"
+                      fontSize={40}
+                    >
+                      privilege
+                    </span>
                   </Typography>
                   <Typography
                     width="70%"
@@ -116,8 +106,8 @@ export default function Home() {
                     color="rgba(33, 33, 33, .85)"
                     fontWeight="light"
                   >
-                    No forms or unecessary documentation. Connect a wallet and
-                    work. It's just that simple.
+                    No forms or unecessary documentation. Connect a wallet and work. It's just that
+                    simple.
                   </Typography>
                 </div>
               </Grid>
@@ -133,170 +123,302 @@ export default function Home() {
                 </Button>
               </Grid>
 
-              <Grid item style={{width: '100vw'}}>
-                
-                <marquee style={{width: '100vw'}} width='100vw' direction='left' loop>
-                {
-                  MARKETS.map(market => { return <MarketDisplay /> })
-                }
-                        
-                </marquee>
+              <Grid item style={{ width: '100vw' }}>
+              <Marquee>
+                  {MARKETS.map((market) => {
+                    return <MarketDisplay />
+                  })}
+       </Marquee>
               </Grid>
             </Grid>
           </section>
 
-
           {/* Section 2 */}
           <section className={classes.section}>
-              <Grid container direction='row' alignItems='center' justifyContent='space-between'>
-                <Grid item flexGrow={0.5}>
-                  <>
-                    <Card elevation={1} style={{width: '400px', height: '160px', margin: '15px 0px' }}>
-                    <img src='/crosswalk.jpeg' style={{width: '100%', height: '100%'}} />
-                    </Card>
+            <Grid container direction="row" alignItems="center" justifyContent="space-between">
+              <Grid item flexGrow={0.5}>
+                <>
+                  <Card
+                    elevation={1}
+                    style={{ width: '420px', height: '160px', margin: '15px 0px' }}
+                  >
+                    <img src="/crosswalk.jpeg" style={{ width: '100%', height: '100%' }} />
+                  </Card>
 
-                    <Card elevation={1} style={{width: '400px', height: '160px', margin: '15px 0px' }}>
-                    <img src='/crosswalk.jpeg' style={{width: '100%', height: '100%'}} />
-                    </Card>
-
-                  </>
-                </Grid>
-
-                <Grid item style={{width: '40%'}}>
-                  <Typography py={2} fontSize={20} color='rgba(102, 197, 107, .85)'>
-                    Earn money with no hassle
-                  </Typography>
-
-                  <Typography py={2} fontSize={30} fontWeight='medium' color='rgba(33, 33, 33, 0.85)'>
-                    The ability to work made easy
-                  </Typography>
-
-                  <Typography py={2} fontSize={18} fontWeight='light'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et commodo ligula. Fusce orci erat, aliquet sit amet est quis, auctor dictum orci.
-                  </Typography>
-
-                </Grid>
+                  <Card
+                    elevation={1}
+                    style={{ width: '420px', height: '160px', margin: '15px 0px' }}
+                  >
+                    <img
+                      src="/crosswalk.jpeg"
+                      style={{ transform: 'rotate(180deg)', width: '100%', height: '100%' }}
+                    />
+                  </Card>
+                </>
               </Grid>
+
+              <Grid item style={{ width: '40%' }}>
+                <Typography py={1} fontSize={16} color="rgba(102, 197, 107, .85)">
+                  Earn money with no hassle
+                </Typography>
+
+                <Typography py={1} fontSize={30} fontWeight="medium" color="rgba(33, 33, 33, 0.85)">
+                  The ability to work made easy
+                </Typography>
+
+                <Typography py={1} fontSize={15} fontWeight="light" lineHeight={1.5}>
+                  Connect a wallet and instantly begin looking for work.  Opportunity is permissionless so you don't have to worry about.
+                </Typography>
+              </Grid>
+            </Grid>
           </section>
 
           {/* Section 3 */}
           <section className={classes.section}>
-              <Grid container direction='row' alignItems='center' justifyContent='space-between'>
+            <Grid container direction="row" alignItems="center" justifyContent="space-between">
+              <Grid item style={{ width: '40%' }}>
+                <Typography py={1} fontSize={16} color="rgba(102, 197, 107, .85)">
+                  Made for individuals
+                </Typography>
 
-                <Grid item style={{width: '40%'}}>
-                  <Typography py={2} fontSize={20} color='rgba(102, 197, 107, .85)'>
-                    Made for individuals
-                  </Typography>
+                <Typography py={1} fontSize={30} fontWeight="medium" color="rgba(33, 33, 33, 0.85)">
+                  No corporations, just people
+                </Typography>
 
-                  <Typography py={2} fontSize={30} fontWeight='medium' color='rgba(33, 33, 33, 0.85)'>
-                    No corporations, just people
-                  </Typography>
-
-                  <Typography py={2} fontSize={18} fontWeight='light'>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et commodo ligula. Fusce orci erat, aliquet sit amet est quis, auctor dictum orci.
-                  </Typography>
-
-                </Grid>
-
-                <Grid item flexGrow={0.5}>
-                    <Card elevation={1} style={{width: '100%', height: '200px', margin: '15px 0px' }}>
-                    <img src='/boy_staring.jpeg' style={{width: '100%', height: '100%'}} />
-                    </Card>
-                </Grid>
+                <Typography py={1} fontSize={15} fontWeight="light" lineHeight={1.5}>
+                  Find work or post contracts amongst your peers on a global stage.  No corporations or third parties involved.
+                </Typography>
               </Grid>
+
+              <Grid item flexGrow={0.5}>
+                <Card elevation={1} style={{ width: '100%', height: '200px', margin: '15px 0px' }}>
+                  <img src="/boy_staring.jpeg" style={{ width: '100%', height: '100%' }} />
+                </Card>
+              </Grid>
+            </Grid>
           </section>
 
           <section className={classes.section}>
-            <Grid container alignItems='center' justifyContent='center'>
-            <Card elevation={1} style={{ position: 'relative', width: '100%', height: '600px', margin: '15px 0px' }}>
-            <div className={classes.shadowyDiv} style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '600px'}}>
-              <Typography color='#fff' variant='h6' fontSize={40}>
-                The ability to work is now in the hands of everyone.
-              </Typography>
-            </div>
-            <img src='/crowd.jpeg' style={{width: '100%', height: '100%'}} />
-            
-            </Card>
-            
-             
+            <Grid container alignItems="center" justifyContent="center">
+              <Card
+                elevation={1}
+                style={{ position: 'relative', width: '100%', height: '600px', margin: '15px 0px' }}
+              >
+                <div
+                  className={classes.shadowyDiv}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    width: '100%',
+                    height: '600px',
+                    padding: 100
+                  }}
+                >
+                  <Typography color="#fff" variant="h6" fontSize={40}>
+                    The ability to work is now in the hands of everyone.
+                  </Typography>
+                  <Button variant='text' sx={{ color: '#fff' }} endIcon={<KeyboardArrowRight />}>
+                    Our mission
+                  </Button>
+                </div>
+                <img src="/crowd.jpeg" style={{ width: '100%', height: '100%' }} />
+              </Card>
             </Grid>
           </section>
 
           {/* Section 4 */}
           <section className={classes.section}>
+            <Grid spacing={10} container direction="row" justifyContent="space-evenly" alignItems='flex-start'>
+              <Grid style={{flex: 1.5}} item className={classes.fullGrid}>
+                <Card elevation={4} 
+                style={{ 
+                  width: '100%', 
+                  height: 500, 
+                  boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'
+                  }}>
+                  
+                </Card>
+                <Typography py={3} color="rgba(33, 33, 33, 0.85)" fontWeight="regular" width='80%'>
+                  The simplest way to work without worrying about KYC, a bank account or unnecessary
+                  documentation.
+                </Typography>
+              </Grid>
 
-          </section>
+              <Grid style={{flex: 1}} item className={classes.fullGrid}>
+                <Card 
+                variant='outlined'
+                elevation={0}
+                style={{
+                  padding: 30, 
+                  width: '100%', 
+                  height: 210,
+                 // boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' 
+                  }}>
+                  <Typography fontWeight='medium' color='rgb(33, 33, 33, .85)'>
+                    OPPORTUNITY
+                  </Typography>
+
+                  <Grid height={'100%'} container item direction='column' flex={1} justifyContent='space-evenly'>
+                    <Grid item>
+                    <Typography fontWeight='light' fontSize={15}>
+                    Earn TIP when you complete jobs
+                    </Typography>
+                    </Grid>
+
+                    <Grid item>
+                    <Typography fontWeight='light' fontSize={15}>
+                    Work without KYC or other certifications
+                    </Typography>
+                    </Grid>
+
+                    <Grid item>
+                    <Typography fontWeight='light' fontSize={15}>
+                    Lower fees than most freelancing platforms
+                    </Typography>
+                    </Grid>
+
+                    <Grid item>
+                    <Typography fontWeight='light' fontSize={15}>
+                    Transfers and payouts in a global and decentralized currency
+                    </Typography>
+                    </Grid>
+                  </Grid>
+
+                </Card>
+                
+                <Button
+                  sx={{ padding: 2, margin: '50px 0px' }}
+                  variant="outlined"
+                  className={classes.learnMoreButton}
+                >
+                  Learn more
+                </Button>
+
+                <Grid
+                  container
+                  item
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Grid item>
+                    <Button variant="text" className={classes.textButton}>
+                      Markets
+                    </Button>
+                  </Grid>
+
+                  <Grid item>
+                    <Button variant="text" className={classes.textButton}>
+                      Contracts
+                    </Button>
+                  </Grid>
+
+                  <Grid item>
+                    <Button variant="text" className={classes.textButton}>
+                      Messenger
+                    </Button>
+                  </Grid>
+
+                  <Grid item>
+                    <Button variant="text" className={classes.textButton}>
+                      Profile
+                    </Button>
+                  </Grid>
+                </Grid>
+     
 
 
-          {/* Section 5 */}
-          <section className={classes.section}>
-            <Grid container alignItems='center' justifyContent='center'>
-            <Card elevation={1} style={{ position: 'relative', width: '100%', height: '300px', margin: '15px 0px' }}>
-            <div className={classes.shadowyDiv} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly', width: '100%', height: '300px'}}>
-              <Typography color='#fff' fontWeight='medium' fontSize={20}>
-              Accessible to anyone
-              </Typography>
 
-              <Typography color='#fff' fontWeight='regular' fontSize={18}>
-              Global access to freelancers and employers. No bank accounts, licenses or agreements necessary.
-              </Typography>
 
-              <Typography color='#fff' fontWeight='regular' fontSize={18}>
-              Start earning money today with just a few clicks.
-              </Typography>
-            </div>
-            <img src='/freelance_woman_one.png' style={{width: '100%', height: '100%'}} />
-            </Card>
+              </Grid>
             </Grid>
           </section>
 
           {/* Section 6 */}
-          <section  className={classes.centeredSection}>
+          <section style={{border: '1px solid #eee', backgroundColor: '#fff'}} className={classes.centeredSection}>
             <div>
-              <Typography textAlign='center' fontWeight='medium' fontSize={30}>
-                Learn Opportunity
+              <Typography color="rgba(33, 33, 33, .85)" py={2} textAlign="center" fontWeight="normal" fontSize={30}>
+                Featured Blog Post
               </Typography>
-              <Typography textAlign='center' fontWeight='regular' fontSize={25}>
-              Creating a secure protocol for permissionless work
+              <Typography color="rgba(33, 33, 33, .85)" textAlign="center" fontWeight="light" fontSize={25}>
+                Creating a secure protocol for permissionless work
               </Typography>
             </div>
-            
-            <Grid my={6} container direction='row' alignItems='center' justifyContent='space-evenly'>
-              {
-                BUTTONS.map(button => {
-                  return <Button variant='text'> {button} </Button>
-                })
-              }
+
+            <Grid
+              my={6}
+              container
+              direction="row"
+              alignItems="center"
+              justifyContent="space-evenly"
+            >
+               <Card elevation={10} sx={{ boxShadow: '0px 6px 6px -3px #eee, 0px 10px 14px 1px #eee, 0px 4px 18px 3px #eee',  borderRadius: 2, maxWidth: 600 }}>
+      <CardActionArea sx={{ padding: 2, display: 'flex', height: '100%',  flexDirection: 'row', alignItems: 'flex-start', }}>
+        <CardMedia
+          component="img"
+          style={{ height: '100%', borderRadius: 5, width: 300 }}
+          image="https://picsum.photos/200"
+          alt="green iguana"
+        />
+        <CardContent style={{ height: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexDirection: 'column'}}>
+          <Typography gutterBottom variant="h5" component="div">
+            The case for a permissionless freelancing network
+          </Typography>
+          <Stack direction='row' gap={2} alignItems='center'>
+            <Avatar sx={{height: 35, width: 35}}>
+              EH
+            </Avatar>
+
+            <div>
+              <Typography fontSize={12} fontWeight='medium'>
+                Elijah Hampton
+              </Typography>
+              <Typography fontSize={10} color='#aaa'>
+                Coming soon
+              </Typography>
+            </div>
+          </Stack>
+        </CardContent>
+      </CardActionArea>
+    </Card>
             </Grid>
 
-            <Typography style={{width: '1010px' }} component='p' textAlign='center'>
-            Maecenas sagittis elit eu odio elementum, in malesuada felis dictum. Fusce pulvinar odio turpis, rhoncus sagittis eros aliquam vel. Nullam ut tristique ante. Aenean ullamcorper diam a finibus vestibulum. Vestibulum tortor nunc, tempor vel nisi at, faucibus pretium ligula. Pellentesque et justo lobortis, convallis sem eget, pharetra orci. Ut tempor finibus efficitur. 
-            </Typography>
           </section>
 
           {/* Section 7*/}
           <section className={classes.section}>
-            <Grid container alignItems='center' justifyContent='center'>
-            <Card elevation={1} style={{ position: 'relative', width: '100%', height: '600px', margin: '15px 0px' }}>
-            <div className={classes.shadowyDiv} style={{padding: '5% 7%', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', width: '100%', height: '600px'}}>
-              <Typography py={3} color='#fff' variant='h6' fontSize={40}>
-              The future of work relies on highly skilled individuals, not corporations.
-              </Typography>
-              <Button variant='outlined' color='secondary'>
-                Learn more
-              </Button>
-            </div>
-            <img src='/freelance.jpg' style={{width: '100%', height: '100%'}} />
-            
-            </Card>
-            
-             
+            <Grid container alignItems="center" justifyContent="center">
+              <Card
+                elevation={1}
+                style={{ position: 'relative', width: '100%', height: '670px', margin: '15px 0px' }}
+              >
+                <div
+                  className={classes.shadowyDiv}
+                  style={{
+                    padding: '5% 7%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    justifyContent: 'center',
+                    width: '100%',
+                    height: '670px',
+                  }}
+                >
+                  <Typography py={3} color="#fff" variant="h6" fontSize={40}>
+                    The future of work relies on highly skilled individuals, not corporations.
+                  </Typography>
+                  <Button size="large" variant="outlined" sx={{ color: '#fff', borderColor: '#eee' }}>
+                    Learn more
+                  </Button>
+                </div>
+                <img src="/freelance.jpg" style={{ width: '100%', height: '100%' }} />
+              </Card>
             </Grid>
           </section>
 
           <Footer />
-   
-          
         </main>
       </div>
     </ThemeProvider>

@@ -3,9 +3,10 @@ import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles(() => {
     return {
         footer: {
-            height: '350px',
             width: '100vw',
-            backgroundColor: '#000'
+            padding: '5% 20%',
+            width: '100%',
+            backgroundColor: '#fbfbfd'
         }
     }
 })

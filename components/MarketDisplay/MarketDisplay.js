@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     Paper,
-    Card as MuiCard,
+    Card,
     CardContent,
     CardActions,
     Typography,
@@ -10,37 +10,24 @@ import {
 import useStyles from './MarketDisplayStyles'
 import styled from 'styled-components'
 
-const Card = styled(MuiCard)`
-  box-shadow: none;
-  padding: 20px 15px;
-  margin: 0px 10px;
-  width: 300px;
-  height: auto;
-  display: inline-block;
-}`
-
-export default function MarketDisplay({ marketTitle }) {
+export default function MarketDisplay() {
     const classes = useStyles()
 
     return (
-        <Card variant='outlined' elevation={0}>
+        <Card sx={{ padding: '10px 10px', margin: '0px 15px',   boxShadow: 'none',  width: '300px', }} variant='outlined' elevation={0}>
             <CardContent>
            
                 <Typography fontWeight='bold' fontSize={15}>
                     Web Development
                 </Typography>
-                <Typography noWrap={false} className={classes.wrapText} align='center' variant='body2' fontWeight='light' fontSize={12} >
-                
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate neque, eu pretium magna. Aliquam at lectus sapien. Aenean gravida, magna eget 
-           
-                   
+
+                <Typography sx={{ lineClamp: 2 }} fontWeight='light' fontSize={12} color='rgba(33, 33, 33, 0.85)'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate neque, eu.
                 </Typography>
         
             </CardContent>
             <CardActions>
-            <Button variant='text' color='secondary'>
-                Coming soon
-            </Button>
+          
             </CardActions>
         </Card>
     )
