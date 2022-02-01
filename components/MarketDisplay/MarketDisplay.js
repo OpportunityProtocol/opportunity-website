@@ -10,7 +10,7 @@ import {
 import useStyles from './MarketDisplayStyles'
 import styled from 'styled-components'
 
-export default function MarketDisplay() {
+export default function MarketDisplay({ marketTitle }) {
     const classes = useStyles()
 
     return (
@@ -18,7 +18,7 @@ export default function MarketDisplay() {
             <CardContent>
            
                 <Typography fontWeight='bold' fontSize={15}>
-                    Web Development
+                    {marketTitle}
                 </Typography>
 
                 <Typography sx={{ lineClamp: 2 }} fontWeight='light' fontSize={12} color='rgba(33, 33, 33, 0.85)'>

@@ -18,12 +18,23 @@ import {
   Divider,
 } from '@mui/material';
 import { themeOptions } from '../material_theme';
-import Marquee from "react-fast-marquee";
+import Marquee from 'react-fast-marquee';
 import useStyles from '../styles/styles';
 import { ArrowRight, KeyboardArrowRight } from '@mui/icons-material';
 import MarketDisplay from '../components/MarketDisplay/MarketDisplay';
 import Footer from '../components/Footer/Footer';
-const MARKETS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const MARKETS = [
+  'Development & IT',
+  'Design & Creative',
+  'Sales & Marketing',
+  'Writing & Translation',
+  'Admin & Customer Support',
+  'Writing & Translation',
+  'Finance & Accounting',
+  'Legal',
+  'HR & Training',
+  'Engineering & Architecture',
+];
 const BUTTONS = ['Exchange', 'Markets', 'Payouts', 'DAO'];
 
 export default function Home() {
@@ -57,15 +68,24 @@ export default function Home() {
                 <Grid item>
                   <Typography variant="h6">Opportunity</Typography>
                 </Grid>
-
               </Grid>
             </Paper>
-            <Paper elevation={0} sx={{ color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100vw ', height: 50, background: 'rgb(170,226,173)',
-background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 25%, rgba(161,241,166,1) 100%)' }}>
-  <Typography fontWeight='regular'>
-      Read the whitepaper (coming soon)
-  </Typography>
-</Paper>
+            <Paper
+              elevation={0}
+              sx={{
+                color: '#fff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100vw ',
+                height: 50,
+                background: 'rgb(170,226,173)',
+                background:
+                  'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 25%, rgba(161,241,166,1) 100%)',
+              }}
+            >
+              <Typography fontWeight="regular">Read the whitepaper (coming soon)</Typography>
+            </Paper>
             <Grid
               className={classes.introductionSectionGrid}
               container
@@ -82,7 +102,6 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                 <div className={classes.introductionTextContainer}>
                   <Typography
                     py={2}
-                    
                     textAlign="center"
                     fontSize={50}
                     color="rgba(33, 33, 33, .85)"
@@ -124,11 +143,11 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
               </Grid>
 
               <Grid item style={{ width: '100vw' }}>
-              <Marquee>
+                <Marquee>
                   {MARKETS.map((market) => {
-                    return <MarketDisplay />
+                    return <MarketDisplay marketTitle={market} />;
                   })}
-       </Marquee>
+                </Marquee>
               </Grid>
             </Grid>
           </section>
@@ -167,7 +186,8 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                 </Typography>
 
                 <Typography py={1} fontSize={15} fontWeight="light" lineHeight={1.5}>
-                  Connect a wallet and instantly begin looking for work.  Opportunity is permissionless so you don't have to worry about.
+                  Connect a wallet and instantly begin looking for work. Opportunity is
+                  permissionless so you don't have to worry about.
                 </Typography>
               </Grid>
             </Grid>
@@ -186,7 +206,8 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                 </Typography>
 
                 <Typography py={1} fontSize={15} fontWeight="light" lineHeight={1.5}>
-                  Find work or post contracts amongst your peers on a global stage.  No corporations or third parties involved.
+                  Find work or post contracts amongst your peers on a global stage. No corporations
+                  or third parties involved.
                 </Typography>
               </Grid>
 
@@ -213,13 +234,13 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                     justifyContent: 'center',
                     width: '100%',
                     height: '600px',
-                    padding: 100
+                    padding: 100,
                   }}
                 >
                   <Typography color="#fff" variant="h6" fontSize={40}>
                     The ability to work is now in the hands of everyone.
                   </Typography>
-                  <Button variant='text' sx={{ color: '#fff' }} endIcon={<KeyboardArrowRight />}>
+                  <Button variant="text" sx={{ color: '#fff' }} endIcon={<KeyboardArrowRight />}>
                     Our mission
                   </Button>
                 </div>
@@ -230,64 +251,77 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
 
           {/* Section 4 */}
           <section className={classes.section}>
-            <Grid spacing={10} container direction="row" justifyContent="space-evenly" alignItems='flex-start'>
-              <Grid style={{flex: 1.5}} item className={classes.fullGrid}>
-                <Card elevation={4} 
-                style={{ 
-                  width: '100%', 
-                  height: 500, 
-                  boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'
-                  }}>
-                  
-                </Card>
-                <Typography py={3} color="rgba(33, 33, 33, 0.85)" fontWeight="regular" width='80%'>
+            <Grid
+              spacing={10}
+              container
+              direction="row"
+              justifyContent="space-evenly"
+              alignItems="flex-start"
+            >
+              <Grid style={{ flex: 1.5 }} item className={classes.fullGrid}>
+                <Card
+                  elevation={4}
+                  style={{
+                    width: '100%',
+                    height: 500,
+                    boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
+                  }}
+                ></Card>
+                <Typography py={3} color="rgba(33, 33, 33, 0.85)" fontWeight="regular" width="80%">
                   The simplest way to work without worrying about KYC, a bank account or unnecessary
                   documentation.
                 </Typography>
               </Grid>
 
-              <Grid style={{flex: 1}} item className={classes.fullGrid}>
-                <Card 
-                variant='outlined'
-                elevation={0}
-                style={{
-                  padding: 30, 
-                  width: '100%', 
-                  height: 210,
-                 // boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' 
-                  }}>
-                  <Typography fontWeight='medium' color='rgb(33, 33, 33, .85)'>
+              <Grid style={{ flex: 1 }} item className={classes.fullGrid}>
+                <Card
+                  variant="outlined"
+                  elevation={0}
+                  style={{
+                    padding: 30,
+                    width: '100%',
+                    height: 210,
+                    // boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'
+                  }}
+                >
+                  <Typography fontWeight="medium" color="rgb(33, 33, 33, .85)">
                     OPPORTUNITY
                   </Typography>
 
-                  <Grid height={'100%'} container item direction='column' flex={1} justifyContent='space-evenly'>
+                  <Grid
+                    height={'100%'}
+                    container
+                    item
+                    direction="column"
+                    flex={1}
+                    justifyContent="space-evenly"
+                  >
                     <Grid item>
-                    <Typography fontWeight='light' fontSize={15}>
-                    Earn TIP when you complete jobs
-                    </Typography>
+                      <Typography fontWeight="light" fontSize={15}>
+                        Earn TIP when you complete jobs
+                      </Typography>
                     </Grid>
 
                     <Grid item>
-                    <Typography fontWeight='light' fontSize={15}>
-                    Work without KYC or other certifications
-                    </Typography>
+                      <Typography fontWeight="light" fontSize={15}>
+                        Work without KYC or other certifications
+                      </Typography>
                     </Grid>
 
                     <Grid item>
-                    <Typography fontWeight='light' fontSize={15}>
-                    Lower fees than most freelancing platforms
-                    </Typography>
+                      <Typography fontWeight="light" fontSize={15}>
+                        Lower fees than most freelancing platforms
+                      </Typography>
                     </Grid>
 
                     <Grid item>
-                    <Typography fontWeight='light' fontSize={15}>
-                    Transfers and payouts in a global and decentralized currency
-                    </Typography>
+                      <Typography fontWeight="light" fontSize={15}>
+                        Transfers and payouts in a global and decentralized currency
+                      </Typography>
                     </Grid>
                   </Grid>
-
                 </Card>
-                
+
                 <Button
                   sx={{ padding: 2, margin: '50px 0px' }}
                   variant="outlined"
@@ -327,22 +361,31 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                     </Button>
                   </Grid>
                 </Grid>
-     
-
-
-
-
               </Grid>
             </Grid>
           </section>
 
           {/* Section 6 */}
-          <section style={{border: '1px solid #eee', backgroundColor: '#fff'}} className={classes.centeredSection}>
+          <section
+            style={{ border: '1px solid #eee', backgroundColor: '#fff' }}
+            className={classes.centeredSection}
+          >
             <div>
-              <Typography color="rgba(33, 33, 33, .85)" py={2} textAlign="center" fontWeight="normal" fontSize={30}>
+              <Typography
+                color="rgba(33, 33, 33, .85)"
+                py={2}
+                textAlign="center"
+                fontWeight="normal"
+                fontSize={30}
+              >
                 Featured Blog Post
               </Typography>
-              <Typography color="rgba(33, 33, 33, .85)" textAlign="center" fontWeight="light" fontSize={25}>
+              <Typography
+                color="rgba(33, 33, 33, .85)"
+                textAlign="center"
+                fontWeight="light"
+                fontSize={25}
+              >
                 Creating a secure protocol for permissionless work
               </Typography>
             </div>
@@ -354,37 +397,57 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
               alignItems="center"
               justifyContent="space-evenly"
             >
-               <Card elevation={10} sx={{ boxShadow: '0px 6px 6px -3px #eee, 0px 10px 14px 1px #eee, 0px 4px 18px 3px #eee',  borderRadius: 2, maxWidth: 600 }}>
-      <CardActionArea sx={{ padding: 2, display: 'flex', height: '100%',  flexDirection: 'row', alignItems: 'flex-start', }}>
-        <CardMedia
-          component="img"
-          style={{ height: '100%', borderRadius: 5, width: 300 }}
-          image="https://picsum.photos/200"
-          alt="green iguana"
-        />
-        <CardContent style={{ height: '100%', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexDirection: 'column'}}>
-          <Typography gutterBottom variant="h5" component="div">
-            The case for a permissionless freelancing network
-          </Typography>
-          <Stack direction='row' gap={2} alignItems='center'>
-            <Avatar sx={{height: 35, width: 35}}>
-              EH
-            </Avatar>
+              <Card
+                elevation={10}
+                sx={{
+                  boxShadow: '0px 6px 6px -3px #eee, 0px 10px 14px 1px #eee, 0px 4px 18px 3px #eee',
+                  borderRadius: 2,
+                  maxWidth: 600,
+                }}
+              >
+                <CardActionArea
+                  sx={{
+                    padding: 2,
+                    display: 'flex',
+                    height: '100%',
+                    flexDirection: 'row',
+                    alignItems: 'flex-start',
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    style={{ height: '100%', borderRadius: 5, width: 300 }}
+                    image="https://picsum.photos/200"
+                    alt="green iguana"
+                  />
+                  <CardContent
+                    style={{
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      justifyContent: 'space-between',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    <Typography gutterBottom variant="h5" component="div">
+                      The case for a permissionless freelancing network
+                    </Typography>
+                    <Stack direction="row" gap={2} alignItems="center">
+                      <Avatar sx={{ height: 35, width: 35 }}>EH</Avatar>
 
-            <div>
-              <Typography fontSize={12} fontWeight='medium'>
-                Elijah Hampton
-              </Typography>
-              <Typography fontSize={10} color='#aaa'>
-                Coming soon
-              </Typography>
-            </div>
-          </Stack>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+                      <div>
+                        <Typography fontSize={12} fontWeight="medium">
+                          Elijah Hampton
+                        </Typography>
+                        <Typography fontSize={10} color="#aaa">
+                          Coming soon
+                        </Typography>
+                      </div>
+                    </Stack>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
             </Grid>
-
           </section>
 
           {/* Section 7*/}
@@ -409,7 +472,11 @@ background: 'linear-gradient(90deg, rgba(103,231,110,1) 0%, rgba(103,231,110,1) 
                   <Typography py={3} color="#fff" variant="h6" fontSize={40}>
                     The future of work relies on highly skilled individuals, not corporations.
                   </Typography>
-                  <Button size="large" variant="outlined" sx={{ color: '#fff', borderColor: '#eee' }}>
+                  <Button
+                    size="large"
+                    variant="outlined"
+                    sx={{ color: '#fff', borderColor: '#eee' }}
+                  >
                     Learn more
                   </Button>
                 </div>
