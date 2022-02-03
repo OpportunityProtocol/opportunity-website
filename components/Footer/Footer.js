@@ -10,50 +10,45 @@ export default function Footer() {
 
   return (
     <Box className={classes.footer}>
-      <Grid container direction="row" alignItems="flex-start" justifyContent="space-between">
-        <Grid item>
-          <Grid spacing={8} container item direction="row" alignItems="flex-start">
-          <Grid item>
+      <Grid container direction='row' alignItems="flex-start" justifyContent="space-between">
+          <Grid item style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', flex: 1}}>
+            <div className={classes.column}>
               <Typography variant='h6' color='rgba(33, 33, 33, .85)'>Opportunity</Typography>
               <Typography fontWeight="light" color='#212121'>Permissionless freelancing markets</Typography>
-            </Grid>
-            
-            <Grid item>
+              </div>
+
+              <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Explore</Typography>
               <Typography fontWeight="light" color='#212121'>Blog</Typography>
               <Typography fontWeight="light" color='#212121'>Whitepaper</Typography>
               <Typography fontWeight="light" color='#212121'>Frequently Asked Questions</Typography>
-            </Grid>
+              </div>
 
-            <Grid item>
+              <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Community</Typography>
               <Typography fontWeight="light" color='#212121'>Contact</Typography>
               <Typography fontWeight="light" color='#212121'>Discord</Typography>
               <Typography fontWeight="light" color='#212121'>Github</Typography>
-            </Grid>
+              </div>
 
-            <Grid item>
+              <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Contribute</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity UI</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity Core</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity Service</Typography>
+              </div>
             </Grid>
+
+
+
           </Grid>
-        </Grid>
 
-        <Grid item>
-          <Stack direction="row" gap={3}>
-            <FaTwitter size={30} color="rgb(29, 161, 242)" />
-            <FaDiscord size={30} color="rgb(88, 101, 242)" />
-          </Stack>
-        </Grid>
-      </Grid>
 
-      <Divider sx={{margin: '20px 0px'}} />
+      <Divider sx={{margin: '60px 0px'}} />
 
       <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <Typography fontWeight='light'>
-          Building with love for the world.  All code is open source at www.github.com/polarisorganization
+          Building with love for the world.  All code is open source at www.github.com/opportunityorganization
         </Typography>
       </Box>
     </Box>

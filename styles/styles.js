@@ -7,18 +7,17 @@ const useStyles = makeStyles(() => {
             height: '100vh',
             display: 'flex',
             flexDirection: 'column',
-            backgroundColor: '#FBFBFD',
-            position: 'relative',
+            backgroundColor: '#fff',
+
         },
 
         introductionSectionGrid: {
             flex: 1,
+            width: '100vw',
         },
 
         introductionTextContainer: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center'
+            height: 300,
         },
 
         introductionChatButton: {
@@ -30,7 +29,7 @@ const useStyles = makeStyles(() => {
 
         appbar: {
             width: '100vw',
-            height: '70px',
+            height: '70px'
         },
 
         fullGrid: {
@@ -44,7 +43,7 @@ const useStyles = makeStyles(() => {
 
         appbarPaper: {
             backgroundColor: '#FBFBFD',
-            padding: '0% 2%',
+            padding: '0% 10%',
             display: 'flex',
              alignItems: 'center'
         },
@@ -57,20 +56,19 @@ const useStyles = makeStyles(() => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            opacity: 0.5,
+            opacity: 0.5
         },
 
         backgroundImage: {
-            position: 'absolute',
             width: '100%',
-            height: 'calc(100% - 70px)',
-            opacity: 0.1
+            height: '100%',
+            opacity: 0.3
         },
 
         section: {
-            padding: '5% 20%',
+            padding: '5% 15%',
             width: '100%',
-            background: '#FBFBFD'
+            background: '#fff',
         },
 
         textButton: {
