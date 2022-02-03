@@ -231,7 +231,6 @@ export default function Home() {
                 <Typography
                   py={1}
                   fontSize={15}
-                  fontWeight="light"
                   fontWeight="regular"
                   color="#8f8f8f"
 
