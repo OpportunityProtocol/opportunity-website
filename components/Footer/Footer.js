@@ -3,7 +3,6 @@ import useStyles from './FooterStyles';
 
 import { Box, Grid, Divider, Typography, Stack } from '@mui/material';
 
-import { FaDiscord, FaTwitter } from 'react-icons/fa';
 
 export default function Footer() {
   const classes = useStyles();

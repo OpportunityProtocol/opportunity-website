@@ -1,101 +1,121 @@
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => {
-    return {
-        introductionSection: {
-            width: '100vw',
-            height: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: '#fff',
+  return {
+    introductionSection: {
+      width: "100vw",
+      height: "100vh",
+      display: "flex",
+      flexDirection: "column",
+      backgroundColor: "#fff",
+    },
 
-        },
+    introductionSectionGrid: {
+      flex: 1,
+      width: "100vw",
+    },
 
-        introductionSectionGrid: {
-            flex: 1,
-            width: '100vw',
-        },
+    introductionTextContainer: {
+      height: 300,
+    },
 
-        introductionTextContainer: {
-            height: 300,
-        },
+    introductionChatButton: {
+      borderRadius: "0px !important",
+      border: "1px solid #eee",
+      padding: 20,
+      backgroundColor: "#fff",
+    },
 
-        introductionChatButton: {
-            borderRadius: '0px !important',
-            border: '1px solid #eee',
-            padding: 20,
-            backgroundColor: '#fff'
-        },
+    appbar: {
+      width: "100vw",
+      height: "70px",
+    },
 
-        appbar: {
-            width: '100vw',
-            height: '70px'
-        },
+    fullGrid: {
+      // width: '100%',
+      //flex: 1,
+    },
 
-        fullGrid: {
-            width: '100%',
-            flex: 1,
-        },
+    toolbar: {
+      backgroundColor: "#FBFBFD",
+    },
 
-        toolbar: {
-            backgroundColor: '#FBFBFD'
-        },
+    appbarPaper: {
+      backgroundColor: "#FBFBFD",
+      padding: "0% 12%",
+      display: "flex",
+      alignItems: "center",
+    },
 
-        appbarPaper: {
-            backgroundColor: '#FBFBFD',
-            padding: '0% 10%',
-            display: 'flex',
-             alignItems: 'center'
-        },
+    backgroundImageContainer: {
+      position: "absolute",
+      width: "100%",
+      height: "calc(100vh - 70px)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      opacity: 0.5,
+    },
 
-        backgroundImageContainer: {
-            
-            position: 'absolute',
-            width: '100%',
-            height: 'calc(100vh - 70px)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            opacity: 0.5
-        },
+    backgroundImage: {
+      width: "100%",
+      height: "100%",
+      opacity: 0.3,
+    },
 
-        backgroundImage: {
-            width: '100%',
-            height: '100%',
-            opacity: 0.3
-        },
+    section: {
+      padding: "5% 12%",
+      width: "100%",
+      background: "#fff",
+    },
 
-        section: {
-            padding: '5% 15%',
-            width: '100%',
-            background: '#fff',
-        },
+    textButton: {
+      color: "rgba(33, 33, 33, 0.85)",
+    },
 
-        textButton: {
-            color: 'rgba(33, 33, 33, 0.85)'
-        },
+    learnMoreButton: {
+      width: "100%",
+      flex: 1,
+      border: "1px solid #eee",
+      color: "#66C56B",
+    },
 
-        learnMoreButton: {
-            width: '100%',
-            flex: 1,
-            border: '1px solid #eee',
-            color: '#66C56B',
-        },
+    centeredSection: {
+      padding: "5% 12%",
+      width: "100%",
+      background: "#FBFBFD",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
 
-        centeredSection: {
-            padding: '5% 12%',
-            width: '100%',
-            background: '#FBFBFD',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
+    shadowyDiv: {
+      position: "absolute",
+      backgroundColor: "rgba(0,0,0,0.5)",
+    },
 
-        shadowyDiv: {
-            position: 'absolute',
-            backgroundColor: 'rgba(0,0,0,0.5)',
-        }
+    icon: {
+      margin: "20px 0px",
+      width: "50px",
+      height: "50px",
+    },
+
+    modularSectionCard: {
+        backgroundColor: 'rgb(236, 237, 242)', borderRadius: 15
+    },
+
+    modularSectionCardContent: {
+      padding: 20,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-evenly",
+    },
+
+    fullElement: {
+        width: '100%',
+        height: '100%'
     }
-})
+  };
+});
 
-export default useStyles
+export default useStyles;
