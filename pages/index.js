@@ -53,11 +53,11 @@ const BUTTONS = ["Exchange", "Markets", "Payouts", "DAO"];
 const INTRO_TEXT_TRANSLATIONS = [
   {
     first: 'Bringing the gig economy to the blockchain',
-    body: "Opportunity envisions a future where every human has the ability to work regardless of geographical location or social status. No forms or unecessary documentation. Connect a wallet and work. It's just that simple."
+    body: "The Opportunity protocol envisions a future where every human has the ability to work regardless of geographical location or social status."
   },
   {
     first: 'Llevando la economia de conciertos a la cadena de bloques',
-    body: "Opportunity prevé un futuro en el que cada ser humano tenga la capacidad de trabajar independientemente de su ubicación geográfica o estatus social. Sin formularios ni documentación innecesaria. Conecte una billetera y trabaje. Es así de simple."
+    body: "El Protocolo Opportunity prevé un futuro en el que cada ser humano tenga la capacidad de trabajar independientemente de su ubicación geográfica o estatus social."
   },
   {
     first: '将零工经济带入区块链',
@@ -98,7 +98,7 @@ export default function Home() {
   useInterval(() => {
 onToggleFade()
 
-  }, 4000, 5);
+  }, 3200, 5);
 
   return (
     <ThemeProvider theme={themeOptions}>
@@ -172,7 +172,7 @@ onToggleFade()
                 style={{ width: "100vw", flexGrow: 1 }}
               >
                
-                  <Fade in={fade} timeout={500} onExited={() => {
+                  <Fade in={fade} timeout={200} onExited={() => {
                     if (currIntroTextIndex == INTRO_TEXT_TRANSLATIONS.length - 1) {
                       setCurrIntorTextIndex(0)
                     } else {
