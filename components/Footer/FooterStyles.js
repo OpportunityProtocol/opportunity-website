@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => {
             backgroundColor: '#fbfbfd',
             border: '1px solid #eee',
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'column'
         },
         column: {
   

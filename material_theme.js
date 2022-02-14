@@ -22,5 +22,10 @@ export const themeOptions = createTheme({
     button: {
       textTransform: 'none'
     }
+  },
+  components: {
+    MuiButton: {
+      textTransform: 'none',
+    },
   }
 });

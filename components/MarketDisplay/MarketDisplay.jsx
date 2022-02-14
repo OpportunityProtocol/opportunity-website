@@ -14,10 +14,10 @@ export default function MarketDisplay({ marketTitle }) {
     const classes = useStyles()
 
     return (
-        <Card sx={{ padding: '10px 10px', margin: '0px 15px',   boxShadow: 'none',  width: '300px', }} variant='outlined' elevation={0}>
+        <Card sx={{  margin: '0px 15px',   boxShadow: 'none',  width: '300px', }} variant='outlined' elevation={0}>
             <CardContent>
            
-                <Typography fontWeight='bold' fontSize={15}>
+                <Typography fontWeight='semibold' fontSize={15}>
                     {marketTitle}
                 </Typography>
 
@@ -26,9 +26,7 @@ export default function MarketDisplay({ marketTitle }) {
                 </Typography>
         
             </CardContent>
-            <CardActions>
-          
-            </CardActions>
+        
         </Card>
     )
 }

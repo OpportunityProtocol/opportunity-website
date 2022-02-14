@@ -2,9 +2,11 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => {
     return {
-    wrapText: {
-        wordWrap: 'break-word'
-    }
+        card: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        }
     }
 })
 

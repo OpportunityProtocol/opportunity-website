@@ -15,6 +15,11 @@ const useStyles = makeStyles(() => {
       width: '100vw',
     },
 
+    descriptionImage: {
+      width: '100%',
+      height: 400,
+    },
+
     introductionTextContainer: {
       flexGrow: 1,
       display: 'flex',
@@ -22,6 +27,18 @@ const useStyles = makeStyles(() => {
       textAlign: 'center',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+
+    gradientWhiteToDarker: {
+      background: 'rgb(255,255,255)',
+      background:
+        'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(251,251,253,1) 100%)',
+    },
+
+    gradientDarkerToWhite: {
+      background: 'rgb(251,251,253)',
+      background:
+        'linear-gradient(180deg, rgba(251,251,253,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%)',
     },
 
     appbar: {
@@ -56,9 +73,26 @@ const useStyles = makeStyles(() => {
       alignItems: 'center',
     },
 
+    shadowyCard: {
+      position: 'relative',
+      width: '100%',
+      height: '670px',
+      margin: '15px 0px',
+    },
+
     shadowyDiv: {
       position: 'absolute',
       backgroundColor: 'rgba(0,0,0,0.5)',
+    },
+
+    shadowyDivContainer: {
+      padding: '5% 7%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'center',
+      width: '100%',
+      height: '670px',
     },
 
     icon: {
