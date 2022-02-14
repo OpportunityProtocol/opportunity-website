@@ -1,131 +1,94 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => {
   return {
     introductionSection: {
-      width: "100vw",
-      height: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      backgroundColor: "#fff",
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      backgroundColor: '#fff',
     },
 
     introductionSectionGrid: {
       flex: 1,
-      width: "100vw",
+      width: '100vw',
     },
 
     introductionTextContainer: {
       flexGrow: 1,
-      display: 'flex', 
+      display: 'flex',
       flexDirection: 'column',
       textAlign: 'center',
       alignItems: 'center',
-      justifyContent: 'center'
-    },
-
-    introductionChatButton: {
-      borderRadius: "0px !important",
-      border: "1px solid #eee",
-      padding: 20,
-      backgroundColor: "#fff",
+      justifyContent: 'center',
     },
 
     appbar: {
-      width: "100vw",
-      height: "70px",
+      width: '100vw',
+      height: '70px',
     },
 
-    fullGrid: {
-      // width: '100%',
-      //flex: 1,
+    appbarPaper: {
+      backgroundColor: '#FBFBFD',
+      padding: '0% 12%',
+      display: 'flex',
+      alignItems: 'center',
     },
 
     flexedGridItem: {
       display: 'flex',
       flexDirection: 'row',
-      alignItems: 'center'
-    },
-
-    toolbar: {
-      backgroundColor: "#FBFBFD",
-    },
-
-    appbarPaper: {
-      backgroundColor: "#FBFBFD",
-      padding: "0% 12%",
-      display: "flex",
-      alignItems: "center",
-    },
-
-    backgroundImageContainer: {
-      position: "absolute",
-      width: "100%",
-      height: "calc(100vh - 70px)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      opacity: 0.5,
-    },
-
-    backgroundImage: {
-      width: "100%",
-      height: "100%",
-      opacity: 0.3,
+      alignItems: 'center',
     },
 
     section: {
-      padding: "5% 12%",
-      width: "100%",
-
-    },
-
-    textButton: {
-      color: "rgba(33, 33, 33, 0.85)",
-    },
-
-    learnMoreButton: {
-      width: "100%",
-      flex: 1,
-      border: "1px solid #eee",
-      color: "#66C56B",
+      padding: '5% 12%',
+      width: '100%',
     },
 
     centeredSection: {
-      padding: "5% 12%",
-      width: "100%",
-      background: "#FBFBFD",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
+      padding: '5% 12%',
+      width: '100%',
+      background: '#FBFBFD',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
     },
 
     shadowyDiv: {
-      position: "absolute",
-      backgroundColor: "rgba(0,0,0,0.5)",
+      position: 'absolute',
+      backgroundColor: 'rgba(0,0,0,0.5)',
     },
 
     icon: {
-      margin: "20px 0px",
-      width: "50px",
-      height: "50px",
+      margin: '20px 0px',
+      width: '50px',
+      height: '50px',
     },
 
     modularSectionCard: {
-        backgroundColor: 'rgb(236, 237, 242)', borderRadius: 15
+      backgroundColor: 'rgb(236, 237, 242)',
+      borderRadius: 15,
     },
 
     modularSectionCardContent: {
       padding: 20,
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "space-evenly",
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
     },
 
     fullElement: {
-        width: '100%',
-        height: '100%'
-    }
+      width: '100%',
+      height: '100%',
+    },
+
+    learnCard: {
+      position: 'relative',
+      margin: '15px 0px',
+      padding: 20,
+    },
   };
 });
 
