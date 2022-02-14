@@ -12,8 +12,8 @@ const useStyles = makeStyles(() => {
             flexDirection: 'column',
         },
         column: {
-            display: 'flex',
-            flexDirection: 'column',
+  
+          
         }
     }
 })

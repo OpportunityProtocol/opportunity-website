@@ -16,7 +16,12 @@ const useStyles = makeStyles(() => {
     },
 
     introductionTextContainer: {
-      height: 300,
+      flexGrow: 1,
+      display: 'flex', 
+      flexDirection: 'column',
+      textAlign: 'center',
+      alignItems: 'center',
+      justifyContent: 'center'
     },
 
     introductionChatButton: {
@@ -34,6 +39,12 @@ const useStyles = makeStyles(() => {
     fullGrid: {
       // width: '100%',
       //flex: 1,
+    },
+
+    flexedGridItem: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center'
     },
 
     toolbar: {
@@ -66,7 +77,7 @@ const useStyles = makeStyles(() => {
     section: {
       padding: "5% 12%",
       width: "100%",
-      background: "#fff",
+
     },
 
     textButton: {

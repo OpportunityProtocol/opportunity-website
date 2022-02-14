@@ -10,11 +10,11 @@ export default function Footer() {
   return (
     <Box className={classes.footer}>
       <Grid container direction='row' alignItems="flex-start" justifyContent="space-between">
-          <Grid item style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', flex: 1}}>
-            <div className={classes.column}>
+          <Grid item style={{display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flex: 1}}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}className={classes.column} >
               <Typography variant='h6' color='rgba(33, 33, 33, .85)'>Opportunity</Typography>
               <Typography fontWeight="light" color='#212121'>Permissionless freelancing markets</Typography>
-              </div>
+              </Box>
 
               <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Explore</Typography>
@@ -24,17 +24,17 @@ export default function Footer() {
               </div>
 
               <div className={classes.column}>
-              <Typography color='rgba(33, 33, 33, .85)'>Community</Typography>
-              <Typography fontWeight="light" color='#212121'>Contact</Typography>
-              <Typography fontWeight="light" color='#212121'>Discord</Typography>
-              <Typography fontWeight="light" color='#212121'>Github</Typography>
-              </div>
-
-              <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Contribute</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity UI</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity Core</Typography>
               <Typography fontWeight="light" color='#212121'>Opportunity Service</Typography>
+              </div>
+
+              <div className={classes.column}>
+              <Typography color='rgba(33, 33, 33, .85)'>Community</Typography>
+              <Typography fontWeight="light" color='#212121'>Contact</Typography>
+              <Typography fontWeight="light" color='#212121'>Discord</Typography>
+              <Typography fontWeight="light" color='#212121'>Github</Typography>
               </div>
             </Grid>
 
