@@ -38,8 +38,7 @@ const ModularityAcknowledgement = () => {
       className={classes.section}
     >
       <Typography width="80%" variant="h4" py={2} color="#212121">
-        A modular application focused on doing one thing and letting the
-        ecosystem do the rest
+        A modular application focused on doing one thing
       </Typography>
       <Grid
         wrap={false}
@@ -80,8 +79,10 @@ const ModularityAcknowledgement = () => {
                 <Button
                   sx={{
                     color: 'rgba(102, 197, 107, .85)',
-                    fontWeight: 'light',
+                    fontWeight: 'medium',
+                    fontSize: 16,
                   }}
+                  
                 >
                   Learn about Opportunity
                 </Button>
@@ -130,7 +131,8 @@ const ModularityAcknowledgement = () => {
                 <Button
                   sx={{
                     color: 'rgba(102, 197, 107, .85)',
-                    fontWeight: 'light',
+                    fontWeight: 'medium',
+                    fontSize: 16,
                   }}
                 >
                   Learn about DAI
@@ -176,7 +178,8 @@ const ModularityAcknowledgement = () => {
                 <Button
                   sx={{
                     color: 'rgba(102, 197, 107, .85)',
-                    fontWeight: 'light',
+                    fontWeight: 'medium',
+                    fontSize: 16,
                   }}
                 >
                   Learn about Kleros

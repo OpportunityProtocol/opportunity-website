@@ -13,17 +13,38 @@ import Marquee from 'react-fast-marquee'
 import useInterval from 'react-useinterval'
 
 const MARKETS = [
-  'Development & IT',
-  'Design & Creative',
-  'Sales & Marketing',
-  'Writing & Translation',
-  'Admin & Customer Support',
-  'Writing & Translation',
-  'Finance & Accounting',
-  'Legal',
-  'HR & Training',
-  'Engineering & Architecture',
-  'Deploy your own',
+    {
+        market: 'Development & IT',
+        related: ['Computer Support', 'Software Developer', 'Cybersecurity', 'Computer Research Scientist']
+    },
+    {
+        market: 'Sales & Marketing',
+        related: ['Social Media Marketer' ]
+    },
+    {
+        market: 'Writing & Translation',
+        related: ['Content Translator', 'Cross Language Translator']
+    },
+    {
+        market: 'Admin & Customer Support',
+        related: ['Human Resource Manager', 'Customer Support Caller']
+    },
+    {
+        market: 'Finance & Accounting',
+        related: ['Accountant', 'Auditor']
+    },
+    {
+        market:  'Design & Creative',
+        related: ['Graphic Designer', 'UI/UX Designer', 'Photographer', 'Film & Video Editor']
+    },
+    {
+        market: 'Engineering & Architecture',
+        related: ['Architect', 'AutoCAD Drafter' ]
+    },
+    {
+        market: 'Deploy your own',
+        related: ['Ride Sharing', 'Food Delivery']
+    },
 ]
 
 const INTRO_TEXT_TRANSLATIONS = [
@@ -94,11 +115,7 @@ const Hero = () => {
 
           <Grid item className={classes.flexedGridItem}>
             <IconButton mx={2}>
-              <FaGithub size={28} />
-            </IconButton>
-
-            <IconButton mx={2}>
-              <FaDiscord size={34} />
+              <FaGithub size={28} color='#fff' onClick={() => window.location.replace('https://github.com/OpportunityProtocol/opportunity-core')} />
             </IconButton>
           </Grid>
         </Grid>
@@ -150,8 +167,8 @@ const Hero = () => {
 
         <Grid item my={6} width="100%">
           <Marquee>
-            {MARKETS.map((market) => {
-              return <MarketDisplay marketTitle={market} />
+            {MARKETS.map(market => {
+              return <MarketDisplay marketTitle={market.market} related={market.related} />
             })}
           </Marquee>
         </Grid>

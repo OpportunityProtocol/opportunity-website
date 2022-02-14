@@ -32,7 +32,8 @@ const useStyles = makeStyles(() => {
       },
   
       appbarPaper: {
-        backgroundColor: '#FBFBFD',
+        backgroundColor: '#212121',
+        color: '#fff',
         padding: '0% 12%',
         display: 'flex',
         alignItems: 'center',

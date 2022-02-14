@@ -74,7 +74,7 @@ const InformationalOne = () => {
         >
           <Grid xs={12} md={12} lg={6} item className={classes.fullElement}>
             <Card elevation={0} className={classes.fullElement}>
-              <img src="/guy.jpeg" className={classes.descriptionImage} />
+              <img src="/crosswalk.jpeg" className={classes.descriptionImage} />
             </Card>
           </Grid>
 
