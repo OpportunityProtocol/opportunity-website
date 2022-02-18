@@ -3,6 +3,7 @@ import {
     Card,
     CardActionArea,
     CardContent,
+    Box,
     Button,
     CardMedia,
     Typography,
@@ -15,7 +16,7 @@ import useStyles  from '../../styles/styles'
 const BlogPost = () => {
     const classes = useStyles()
     return (
-    <section style={{ backgroundColor: '#fff' }} className={classes.centeredSection}>
+    <section style={{ backgroundColor: '#fff', position: 'relative' }} className={classes.centeredSection}>
     <div>
       <Typography
         color="rgba(33, 33, 33, .85)"
@@ -42,40 +43,29 @@ const BlogPost = () => {
       direction="row"
       alignItems="center"
       justifyContent="space-evenly"
+      style={{position: 'relative'}}
     >
-      <Card
-        elevation={10}
+      <Box
+        elevation={0}
         sx={{
-          boxShadow: '0px 6px 6px -3px #eee, 0px 10px 14px 1px #eee, 0px 4px 18px 3px #eee',
+        //  boxShadow: '0px 6px 6px -3px #eee, 0px 10px 14px 1px #eee, 0px 4px 18px 3px #eee',
           borderRadius: 2,
-          maxWidth: 600,
+          backgroundColor: '#212121',
+          width: '100%',
+          height: 600
         }}
       >
-        <CardActionArea
-          sx={{
-            padding: 2,
-            display: 'flex',
-            height: '100%',
-            flexDirection: 'row',
-            alignItems: 'flex-start',
-          }}
-        >
-          <CardMedia
-            component="img"
-            style={{ height: '100%', borderRadius: 5, width: '100%' }}
-            image="https://picsum.photos/200"
-            alt="green iguana"
-          />
+      
           <CardContent
             style={{
               height: '100%',
               display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'space-between',
+              alignItems: 'center',
+              justifyContent: 'center',
               flexDirection: 'column',
             }}
           >
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h4" fontWeight='bold' component="div" color='#fff'>
               The case for a permissionless labor market protocol
             </Typography>
             <Stack direction="row" gap={2} alignItems="center">
@@ -91,9 +81,10 @@ const BlogPost = () => {
               </div>
             </Stack>
           </CardContent>
-        </CardActionArea>
-      </Card>
+          
+      </Box>
     </Grid>
+
   </section>
     )
 }

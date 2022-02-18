@@ -75,7 +75,7 @@ const Learn = () => {
 
             {COMPONENTS.map(({ title, description }, idx, arr)=> {
               return (
-                <Fade in={cardsAnimated} timeout={1800 * (idx + 1)}>
+                <Fade in={cardsAnimated} timeout={2000 * (idx + 1)}>
                   <Card
                   key={title}
                     classes={{

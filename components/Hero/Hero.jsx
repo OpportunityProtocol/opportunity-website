@@ -1,16 +1,17 @@
+import { useState } from 'react'
 import {
   Grid,
   Fade,
+  Link,
   Paper,
   IconButton,
   Typography,
 } from '@mui/material'
-import { useState } from 'react'
-import { FaGithub, FaDiscord } from 'react-icons/fa'
 import useStyles from './HeroStyles'
 import MarketDisplay from '../MarketDisplay/MarketDisplay'
 import Marquee from 'react-fast-marquee'
 import useInterval from 'react-useinterval'
+import AppBar from '../AppBar/AppBar'
 
 const MARKETS = [
     {
@@ -93,33 +94,7 @@ const Hero = () => {
 
   return (
     <section className={classes.introductionSection}>
-      <Paper
-        className={classes.appbarPaper}
-        square={true}
-        classes={{ outlined: classes.appbar }}
-        elevation={0}
-        variant="outlined"
-      >
-        <Grid
-          container
-          direction="row"
-          spacing={4}
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <Grid item className={classes.flexedGridItem}>
-            <Typography variant="h6" mx={2}>
-              Opportunity
-            </Typography>
-          </Grid>
-
-          <Grid item className={classes.flexedGridItem}>
-            <IconButton mx={2}>
-              <FaGithub size={28} color='#fff' onClick={() => window.location.replace('https://github.com/OpportunityProtocol/opportunity-core')} />
-            </IconButton>
-          </Grid>
-        </Grid>
-      </Paper>
+      <AppBar />
 
       <Grid
         className={classes.introductionSectionGrid}
@@ -130,6 +105,8 @@ const Hero = () => {
       >
         <Grid flexGrow={1} container item alignItems="center" justify="center">
           <Fade
+  
+            appear={false}
             in={fade}
             timeout={200}
             onExited={() => {

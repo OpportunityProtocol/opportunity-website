@@ -49,7 +49,7 @@ const ModularityAcknowledgement = () => {
       >
         <Grid xs={12} md={12} lg={4} item>
           <Slide
-            timeout={500}
+            timeout={1000}
             direction="up"
             in={moduleSectionCardAnimated}
             container={modularSectionRef.current}
@@ -93,7 +93,7 @@ const ModularityAcknowledgement = () => {
 
         <Grid xs={12} md={12} lg={4} style={{ height: '100%' }} item>
           <Slide
-            timeout={1000}
+            timeout={1300}
             direction="up"
             in={moduleSectionCardAnimated}
             container={modularSectionRef.current}

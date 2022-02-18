@@ -60,7 +60,7 @@ const InformationalOne = () => {
             >
               Connect a wallet and instantly begin looking for work. Opportunity
               is permissionless so you don't have to worry about your
-              geographical location or class status.
+              geographical location or social class.
             </Typography>
           </Grid>
         </Grid>

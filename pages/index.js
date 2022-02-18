@@ -93,7 +93,7 @@ export default function Home() {
 
           <Learn />
           <ModularityAcknowledgement />
-          <BlogPost />
+    
 
           {/* Section 7*/}
           <section className={classes.section}>
