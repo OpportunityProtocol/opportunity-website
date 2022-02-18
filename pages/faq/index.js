@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 
-import useStyles from "./styles"
+import useStyles from "../../styles/FaqStyles"
 import ExpandableTitleContent from '../../components/ExpandableTitleContent/ExpandableTitleContent'
 
 import faq from '../../json/faq.json'
