@@ -7,6 +7,7 @@ import {
   Grid,
   ThemeProvider,
   Typography,
+  Box
 } from '@mui/material';
 import Link from 'next/link'
 import { themeOptions } from '../material_theme';
@@ -31,7 +32,8 @@ export default function Home() {
           <Hero />
           <InformationalOne />
 
-          <section
+          <Box
+            sx={{ display: { xs: 'none', md: 'block' }}}
             style={{
               background: 'rgb(255,255,255)',
               background:
@@ -70,11 +72,13 @@ export default function Home() {
                 <img src="/crowd.jpeg" style={{ width: '100%', height: '100%' }} />
               </Card>
             </Grid>
-          </section>
+          </Box>
 
           <Learn />
     
-          <section style={{
+          <Box 
+          sx={{ display: { xs: 'none', md: 'block' }}}
+          style={{
             background: 'rgb(251,251,253)',
             background:
               'linear-gradient(180deg, rgba(251,251,253,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%)',
@@ -120,7 +124,7 @@ export default function Home() {
                 </Card>
               </Grid>
             </Grid>
-          </section>
+          </Box>
 
           <ModularityAcknowledgement />
 

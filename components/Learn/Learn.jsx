@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Grid, Card, Typography, Fade, IconButton } from '@mui/material'
+import { Grid, Card, Typography, Box, Fade, IconButton } from '@mui/material'
 
 import useStyles from './LearnStyles'
 import { CallMadeSharp } from '@mui/icons-material'
@@ -96,20 +96,24 @@ const Learn = () => {
             })}
     
         </Grid>
-
-        <Grid
-          xs={12}
-          sm={12}
+        <Box
+          component={Grid}
+          container
+          item
+          direction='column'
+          alignItems='center'
+          sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: { xs: 'center', sm: 'center', md: 'flex-end'} }}
+          xs={false}
+          sm={false}
           md={12}
           lg={6}
-          item
-          className={classes.worldGridContainer}
+          my={4}
         >
           <img
             src="/world.png"
             className={classes.worldImg}
           />
-        </Grid>
+        </Box>
       </Grid>
     </section>
   )

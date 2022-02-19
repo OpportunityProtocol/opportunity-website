@@ -47,14 +47,14 @@ const InformationalOne = () => {
     </section>
 
     <section>
-    <Grid  my={5} width='100%' container direction='row' justifyContent='center' alignItems='center'>
-        <Grid item mx={5}>
+    <Grid my={5} width='100%' container direction='row' justifyContent='center' alignItems='center'>
+        <Grid item m={5}>
           <Button disabled className={classes.button}  variant='outlined'>
-            Read the Developer Docs (Coming soon)
+            Read the Developer Docs
           </Button>
         </Grid>
 
-        <Grid item mx={5}>
+        <Grid item m={5}>
         <Link href='https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec'>
         <Button className={classes.button} variant='outlined'>
             Read the Whitepaper

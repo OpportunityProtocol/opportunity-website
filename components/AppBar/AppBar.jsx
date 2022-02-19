@@ -5,9 +5,11 @@ import {
   Paper,
   IconButton,
   Typography,
+  Box
 } from '@mui/material'
 import useStyles from './AppBarStyles'
 import Link from 'next/link'
+import LongMenu from '../LongMenu/LongMenu'
 const AppBar = () => {
     const classes = useStyles()
     return (
@@ -18,7 +20,13 @@ const AppBar = () => {
         elevation={0}
         variant="outlined"
       >
-        <Grid
+        <Box sx={{ display: { xs: 'block', md: 'none'  }, width: '100%', justifyContent: 'flex-end' }}>
+          <LongMenu />
+        </Box>
+
+        <Box
+          sx={{ display: { xs: 'none', md: 'flex'  } }}
+          component={Grid}
           container
           direction="row"
           spacing={4}
@@ -59,7 +67,7 @@ const AppBar = () => {
               </Link>
 
           </Grid>
-        </Grid>
+        </Box>
       </Paper>
 )
 }

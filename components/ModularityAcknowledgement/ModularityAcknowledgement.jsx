@@ -64,8 +64,8 @@ const ModularityAcknowledgement = () => {
                   <Typography
                     width="90%"
                     height={80}
-                    fontWeight="300"
-                    fontSize={25}
+                    fontWeight="regular"
+                    fontSize={20}
                     color='rgba(33, 33, 33, .85)'
                   >
                     Global access to markets on Opportunity
@@ -117,8 +117,8 @@ const ModularityAcknowledgement = () => {
                   <Typography
                     width="90%"
                     height={80}
-                    fontWeight="300"
-                    fontSize={25}
+                    fontWeight="regular"
+                    fontSize={20}
                     color='rgba(33, 33, 33, .85)'
                   >
                     Stable exchange through DAI
@@ -168,8 +168,8 @@ const ModularityAcknowledgement = () => {
                   <Typography
                     width="90%"
                     height={80}
-                    fontWeight="300"
-                    fontSize={25}
+                    fontWeight="regular"
+                    fontSize={20}
                     color='rgba(33, 33, 33, .85)'
                   >
                     Dispute protection by Kleros

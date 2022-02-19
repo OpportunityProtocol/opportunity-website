@@ -25,9 +25,9 @@ export default function Footer() {
 
               <div className={classes.column}>
               <Typography color='rgba(33, 33, 33, .85)'>Contribute</Typography>
-              <Typography fontWeight="light" color='#212121'>Opportunity UI</Typography>
-              <Typography fontWeight="light" color='#212121'>Opportunity Core</Typography>
-              <Typography fontWeight="light" color='#212121'>Opportunity Service</Typography>
+              <Typography fontWeight="light" color='#212121'>UI</Typography>
+              <Typography fontWeight="light" color='#212121'>Core</Typography>
+              <Typography fontWeight="light" color='#212121'>Service</Typography>
               </div>
 
               <div className={classes.column}>
