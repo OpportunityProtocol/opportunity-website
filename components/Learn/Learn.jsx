@@ -9,7 +9,7 @@ import useOnScreen from '../../hooks/useOnScreen'
 const COMPONENTS = [
   {
     title: 'Users',
-    description: 'Keep your identity and reputation across all markets.',
+    description: 'Keep your identity and reputation across all markets',
   },
   {
     title: 'Markets',
@@ -19,16 +19,16 @@ const COMPONENTS = [
   {
     title: 'Relationships',
     description:
-      'Employers and workers connect on Opportunity to faciliate fair and transparent contracts.',
+      'Employers and workers connect on Opportunity to faciliate fair and transparent contracts',
   },
   {
     title: 'Escrows',
     description:
-      'Secure payouts between employer and workers with customizable escrows.',
+      'Secure payouts between employer and workers with customizable escrows',
   },
   {
-    title: 'Reputation',
-    description: 'Record good and bad behavior to signal untrustworthy users.',
+    title: 'Reviews',
+    description: 'Submit or read reviews for all employers and workers across the network in every market',
   },
 ]
 
@@ -51,18 +51,14 @@ const Learn = () => {
     className={classes.section}>
       <Grid
         p={3}
-        style={{
-          backgroundColor: 'transparent',
-          borderRadius: 8,
-          border: '1px solid #eee',
-        }}
+        className={classes.gridContainer}
         container
         direction="row"
         justifyContent="space-between"
         alignItems="center"
       >
         <Grid xs={12} md={12} lg={6} item>
-          <Typography variant="h4" color='#212121'>Learn the components</Typography>
+          <Typography variant="h4" color="rgba(33, 33, 33, .85)">Learn the components</Typography>
           <Typography
             py={3}
             color="rgba(33, 33, 33, 0.85)"
@@ -75,7 +71,7 @@ const Learn = () => {
 
             {COMPONENTS.map(({ title, description }, idx, arr)=> {
               return (
-                <Fade in={cardsAnimated} timeout={2000 * (idx + 1)}>
+                <Fade in={cardsAnimated} timeout={1800 * (idx + 1)}>
                   <Card
                   key={title}
                     classes={{
@@ -94,16 +90,6 @@ const Learn = () => {
                     <Typography fontSize={14}>
                       {description}
                     </Typography>
-
-                    <CallMadeSharp
-                      style={{
-                        padding: 10,
-                        position: 'absolute',
-                        top: 0,
-                        right: 0,
-                      }}
-                      sx={{ color: '#66C56B' }}
-                    />
                   </Card>
                 </Fade>
               )
@@ -117,16 +103,11 @@ const Learn = () => {
           md={12}
           lg={6}
           item
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-            justifyContent: 'flex-end',
-          }}
+          className={classes.worldGridContainer}
         >
           <img
             src="/world.png"
-            style={{ opacity: 0.4, width: '80%', height: 250 }}
+            className={classes.worldImg}
           />
         </Grid>
       </Grid>

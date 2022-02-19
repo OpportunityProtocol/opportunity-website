@@ -2,110 +2,77 @@ import {
   Grid,
   Card,
   Typography,
+  Button
 } from '@mui/material'
+
+import Link from 'next/link'
 
 import useStyles from './InformationalOneStyles'
 
 const InformationalOne = () => {
   const classes = useStyles()
   return (
-    <section className={classes.section}>
-      <Grid
-        spacing={3}
-        container
-        direction={{ xs: 'column', lg: 'row' }}
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <Grid
-          container
-          item
-          xs={6}
-          direction="column"
-          alignItems="flex-start"
-          justifyContent="space-between"
-        >
-          <Grid xs={12} md={12} lg={6} item className={classes.fullElement}>
-            <Card elevation={0} className={classes.fullElement}>
-              <img src="/girl.jpeg" className={classes.descriptionImage} />
-            </Card>
+    <>
+
+<section style={{
+        background: 'rgb(255,255,255)',
+        background:
+          'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(251,251,253,1) 100%)',
+      }} className={[classes.section, { display: 'flex', flexDirection: 'column', alignItems: 'center'}]}>
+
+      <Card  elevation={0} className={classes.primarySection}>
+        <Grid container direction='column' alignItems='center' justifyContent='space-evenly'>
+        <Grid item xs={6} my={3} className={classes.graphImgGridContainer}>
+            <img src='/lighter-graph.png' />
           </Grid>
-
-          <Grid
-            style={{ display: 'flex', flexDirection: 'column' }}
-            xs={12}
-            md={12}
-            lg={6}
-            item
-          >
-            <Typography py={1} fontSize={16} color="rgba(102, 197, 107, .85)">
-              Earn money with no hassle
-            </Typography>
-
-            <Typography
-              py={1}
-              fontSize={30}
+          
+          <Grid item xs={6} className={classes.informationTextGridContainer}>
+          <Typography
+              py={3}
+              fontSize={25}
               fontWeight="medium"
               color="rgba(33, 33, 33, 0.85)"
-            >
-              The ability to work made easy
-            </Typography>
 
-            <Typography
-              py={1}
-              fontSize={15}
-              fontWeight="regular"
-              color="#8f8f8f"
-              lineHeight={1.5}
+              textAlign='center'
             >
-              Connect a wallet and instantly begin looking for work. Opportunity
-              is permissionless so you don't have to worry about your
-              geographical location or social class.
+              Opportunity Protocol
+            </Typography>
+            <Typography fontSize={20} width='80%'  textAlign='center' fontWeight='light' color="rgba(33, 33, 33, 0.85)">
+              Create or participate in permission-less labor markets built on top of a behavioral graph of employers and workers.
             </Typography>
           </Grid>
+
         </Grid>
-        <Grid
-          container
-          item
-          xs={6}
-          direction="column"
-          alignItems="flex-start"
-          justifyContent="space-between"
-        >
-          <Grid xs={12} md={12} lg={6} item className={classes.fullElement}>
-            <Card elevation={0} className={classes.fullElement}>
-              <img src="/crosswalk.jpeg" className={classes.descriptionImage} />
-            </Card>
-          </Grid>
+      </Card>
+    </section>
 
-          <Grid xs={12} md={12} lg={6} item>
-            <Typography py={1} fontSize={16} color="rgba(102, 197, 107, .85)">
-              Made for individuals
-            </Typography>
+    <section>
+    <Grid  my={5} width='100%' container direction='row' justifyContent='center' alignItems='center'>
+        <Grid item mx={5}>
+          <Button disabled className={classes.button}  variant='outlined'>
+            Read the Developer Docs (Coming soon)
+          </Button>
+        </Grid>
 
-            <Typography
-              py={1}
-              fontSize={30}
-              fontWeight="medium"
-              color="rgba(33, 33, 33, 0.85)"
-            >
-              No corporations, just people
-            </Typography>
-
-            <Typography
-              py={1}
-              fontSize={15}
-              fontWeight="regular"
-              color="#8f8f8f"
-              lineHeight={1.5}
-            >
-              Find work amongst your peers on a global stage. No corporations or
-              third parties involved so you keep most of your earnings.
-            </Typography>
-          </Grid>
+        <Grid item mx={5}>
+        <Link href='https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec'>
+        <Button className={classes.button} variant='outlined'>
+            Read the Whitepaper
+          </Button>
+              </Link>
+         
         </Grid>
       </Grid>
     </section>
+
+    <Link href='https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec'>
+              <Typography className={classes.link} mx={2} variant='button'  color='#fff'>
+                Whitepaper V1
+            </Typography>
+              </Link>
+
+
+    </>
   )
 }
 

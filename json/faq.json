@@ -5,6 +5,10 @@
            "description": "Opportunity is a decentralized protocol for permission-less labor markets where users can find work and earn money in the simplest manner.  Opportunity will be accessible through desktop and mobile clients at the end of its development.  The Opportunity protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
        },
        {
+        "title": "Is Opportunity a decentralized application or protocol?",
+        "description": "Both.  User's can interface with the protocol through the Opportunity client.  Since Opportunity is open source it can also be forked by developers for their own needs."
+       },
+       {
         "title": "How is Opportunity different from other freelancing platforms?",
         "description": "Opportunity is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and being deplatformed."
        },

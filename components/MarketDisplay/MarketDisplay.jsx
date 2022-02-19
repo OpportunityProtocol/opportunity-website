@@ -23,7 +23,7 @@ export default function MarketDisplay({ marketTitle, related }) {
 
                 <Typography sx={{ lineClamp: 2 }} fontWeight='light' fontSize={12} color='rgba(33, 33, 33, 0.85)'>
                     {related.map((related, idx, arr) => {
-                        return idx === arr.length - 1 ?  <span style={{ color: '#212121',}}>{related}</span> :  <span  style={{ color: '#212121',}}>{related},{" "}</span>
+                        return idx === arr.length - 1 ?  <span color='#212121'>{related}</span> :  <span color='#212121'>{related},{" "}</span>
                     })}
                 </Typography>
         

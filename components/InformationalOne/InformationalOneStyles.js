@@ -18,6 +18,30 @@ const useStyles = makeStyles(() => {
       height: '100%',
     },
 
+    button: {
+      padding: 15
+    },
+
+    graphImgGridContainer: {
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center'
+    },
+
+    informationTextGridContainer: {
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'flex-start'
+    },
+
+    primarySection: {
+      marginTop: 30, 
+      width: '100%', 
+      height: 'auto', 
+      padding: 20
+    }
+
   };
 });
 

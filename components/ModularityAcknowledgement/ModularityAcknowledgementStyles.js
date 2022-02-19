@@ -5,7 +5,7 @@ const useStyles = makeStyles(() => {
     icon: {
       margin: '20px 0px',
       width: '50px',
-      height: '50px',
+      height: '50px'
     },
 
     section: {
@@ -14,15 +14,16 @@ const useStyles = makeStyles(() => {
     },
 
     modularSectionCard: {
-      backgroundColor: 'rgb(236, 237, 242)',
-      borderRadius: 15,
+      backgroundColor: 'transparent',
+      border: 'transparent'
+      //borderRadius: 15,
     },
 
     modularSectionCardContent: {
-      padding: 20,
+      //padding: 20,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'space-evenly',
+      justifyContent: 'center',
     },
 
     fullElement: {

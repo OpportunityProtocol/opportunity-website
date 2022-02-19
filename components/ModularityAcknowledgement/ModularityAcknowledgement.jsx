@@ -11,6 +11,7 @@ import {
   Stack,
 } from '@mui/material'
 import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link'
 import useOnScreen from '../../hooks/useOnScreen';
 
 import useStyles from './ModularityAcknowledgementStyles'
@@ -31,16 +32,17 @@ const ModularityAcknowledgement = () => {
     <section
       ref={modularSectionRef}
       style={{
-        background: 'rgb(251,251,253)',
+        background: 'rgb(255,255,255)',
         background:
-          'linear-gradient(180deg, rgba(251,251,253,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%)',
+          'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 50%, rgba(251,251,253,1) 100%)',
       }}
       className={classes.section}
     >
-      <Typography width="80%" variant="h4" py={2} color="#212121">
+      {/*<Typography width="80%" variant="h4" py={2}  color="rgba(33, 33, 33, .85)">
         A modular application focused on doing one thing
-      </Typography>
+    </Typography>*/}
       <Grid
+      variant='outlined'
         wrap={false}
         spacing={2}
         container
@@ -54,7 +56,7 @@ const ModularityAcknowledgement = () => {
             in={moduleSectionCardAnimated}
             container={modularSectionRef.current}
           >
-            <Card elevation={0} className={classes.modularSectionCard}>
+            <Card elevation={0} variant='outlined' className={classes.modularSectionCard}>
               <CardContent className={classes.modularSectionCardContent}>
                 <img src="/globe.png" className={classes.icon} />
 
@@ -64,11 +66,12 @@ const ModularityAcknowledgement = () => {
                     height={80}
                     fontWeight="300"
                     fontSize={25}
+                    color='rgba(33, 33, 33, .85)'
                   >
                     Global access to markets on Opportunity
                   </Typography>
 
-                  <Typography py={3} fontWeight="light" noWrap={false}>
+                  <Typography fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>
@@ -100,7 +103,7 @@ const ModularityAcknowledgement = () => {
           >
             <Card
               elevation={0}
-              variation="outlined"
+              variant="outlined"
               className={classes.modularSectionCard}
             >
               <CardContent className={classes.modularSectionCardContent}>
@@ -116,11 +119,12 @@ const ModularityAcknowledgement = () => {
                     height={80}
                     fontWeight="300"
                     fontSize={25}
+                    color='rgba(33, 33, 33, .85)'
                   >
                     Stable exchange through DAI
                   </Typography>
 
-                  <Typography py={3} fontWeight="light" noWrap={false}>
+                  <Typography fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>
@@ -128,7 +132,8 @@ const ModularityAcknowledgement = () => {
               </CardContent>
 
               <CardActions>
-                <Button
+              <Link href='https://makerdao.com/en/whitepaper#the-dai-stablecoin'>
+              <Button
                   sx={{
                     color: 'rgba(102, 197, 107, .85)',
                     fontWeight: 'medium',
@@ -137,6 +142,8 @@ const ModularityAcknowledgement = () => {
                 >
                   Learn about DAI
                 </Button>
+            </Link>
+                
               </CardActions>
             </Card>
           </Slide>
@@ -151,7 +158,7 @@ const ModularityAcknowledgement = () => {
           >
             <Card
               elevation={0}
-              variation="outlined"
+              variant="outlined"
               className={classes.modularSectionCard}
             >
               <CardContent className={classes.modularSectionCardContent}>
@@ -163,19 +170,21 @@ const ModularityAcknowledgement = () => {
                     height={80}
                     fontWeight="300"
                     fontSize={25}
+                    color='rgba(33, 33, 33, .85)'
                   >
                     Dispute protection by Kleros
                   </Typography>
 
-                  <Typography py={3} fontWeight="light" noWrap={false}>
+                  <Typography fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>
                 </div>
               </CardContent>
-
+              
               <CardActions>
-                <Button
+              <Link href='https://kleros.io/#'>
+              <Button
                   sx={{
                     color: 'rgba(102, 197, 107, .85)',
                     fontWeight: 'medium',
@@ -184,6 +193,7 @@ const ModularityAcknowledgement = () => {
                 >
                   Learn about Kleros
                 </Button>
+            </Link>
               </CardActions>
             </Card>
           </Slide>
