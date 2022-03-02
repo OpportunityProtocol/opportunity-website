@@ -76,56 +76,6 @@ export default function Home() {
 
           <Learn />
     
-          <Box 
-          sx={{ display: { xs: 'none', md: 'block' }}}
-          style={{
-            background: 'rgb(251,251,253)',
-            background:
-              'linear-gradient(180deg, rgba(251,251,253,1) 0%, rgba(250,250,250,1) 50%, rgba(255,255,255,1) 100%)',
-          }} className={classes.section}>
-            <Grid container alignItems="center" justifyContent="center">
-              <Grid item xs={12}>
-                <Card
-                  elevation={1}
-                  style={{
-                    position: 'relative',
-                    width: '100%',
-                    height: '750px',
-                    margin: '15px 0px',
-                  }}
-                >
-                  <div
-                    className={classes.shadowyDiv}
-                    style={{
-                      padding: '5% 7%',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'flex-start',
-                      justifyContent: 'center',
-                      width: '100%',
-                      height: '750px',
-                    }}
-                  >
-                    <Typography py={3} color="#fff" variant="h6" fontSize={40}>
-                      The future of work relies on highly skilled individuals, not corporations.
-                    </Typography>
-                    <Link href='/faq'>
-                      <Button
-                      size="large"
-                      variant="outlined"
-                      sx={{ color: '#fff', borderColor: '#eee' }}
-                      >
-                        Learn more
-                      </Button>
-                    </Link>
-                    
-                  </div>
-                  <img src="/freelance.jpg" className={classes.fullElement} />
-                </Card>
-              </Grid>
-            </Grid>
-          </Box>
-
           <ModularityAcknowledgement />
 
           <Footer />

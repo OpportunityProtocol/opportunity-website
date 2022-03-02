@@ -93,7 +93,7 @@ const Hero = () => {
   )
 
   return (
-    <section className={classes.introductionSection}>
+    <section style={{position: 'relative'}} className={classes.introductionSection}>
       <AppBar />
 
       <Grid
@@ -150,6 +150,7 @@ const Hero = () => {
           </Marquee>
         </Grid>
       </Grid>
+
     </section>
   )
 }

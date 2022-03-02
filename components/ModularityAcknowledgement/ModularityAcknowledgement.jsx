@@ -42,7 +42,6 @@ const ModularityAcknowledgement = () => {
         A modular application focused on doing one thing
     </Typography>*/}
       <Grid
-      variant='outlined'
         wrap={false}
         spacing={2}
         container
@@ -58,30 +57,28 @@ const ModularityAcknowledgement = () => {
           >
             <Card elevation={0} variant='outlined' className={classes.modularSectionCard}>
               <CardContent className={classes.modularSectionCardContent}>
-                <img src="/globe.png" className={classes.icon} />
+                <img src="/logo2.png" style={{ width: 60, height: 60}} />
 
-                <div>
                   <Typography
                     width="90%"
-                    height={80}
-                    fontWeight="regular"
-                    fontSize={20}
-                    color='rgba(33, 33, 33, .85)'
+                    fontWeight="bold"
+                    fontSize={25}
                   >
-                    Global access to markets on Opportunity
+                    Global markets
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam eu justo et tortor tempus pulvinar.
+                  <Typography width='85%' fontWeight="normal" color='rgba(33, 33, 33, 0.85)' fontSize={14} noWrap={false}>
+                  Build decentralized apps on a developer-friendly platform that features low fees, high speeds, and infinite scalability.
                   </Typography>
-                </div>
-              </CardContent>
 
-              <CardActions>
+
+                  <CardActions sx={{ padding: '0px !important', margin: '0px !important'}}>
                 <Button
+                className={classes.button}
+                variant='outlined'
+                color='primary'
                   sx={{
-                    color: 'rgba(102, 197, 107, .85)',
+                    color: 'rgba(33, 33, 33, .85)',
                     fontWeight: 'medium',
                     fontSize: 16,
                   }}
@@ -90,11 +87,13 @@ const ModularityAcknowledgement = () => {
                   Learn about Opportunity
                 </Button>
               </CardActions>
+              </CardContent>
+
             </Card>
           </Slide>
         </Grid>
 
-        <Grid xs={12} md={12} lg={4} style={{ height: '100%' }} item>
+        <Grid xs={12} md={12} lg={4} item>
           <Slide
             timeout={1300}
             direction="up"
@@ -107,49 +106,46 @@ const ModularityAcknowledgement = () => {
               className={classes.modularSectionCard}
             >
               <CardContent className={classes.modularSectionCardContent}>
-                <img
-                  src="/exchange.png"
-                  className={classes.icon}
-                  style={{ width: '40px' }}
-                />
+              <img src="/dai.png" style={{ width: '80%', height: 60}} />
 
-                <div>
+      
                   <Typography
                     width="90%"
-                    height={80}
-                    fontWeight="regular"
-                    fontSize={20}
-                    color='rgba(33, 33, 33, .85)'
+                    fontSize={25}
+                    fontWeight="bold"
                   >
-                    Stable exchange through DAI
+                    Stable exchange
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam eu justo et tortor tempus pulvinar.
+                  <Typography width='85%' fontWeight="normal" color='rgba(33, 33, 33, 0.85)' fontSize={15} noWrap={false}>
+                  Build decentralized apps on a developer-friendly platform that features low fees, high speeds, and infinite scalability.
                   </Typography>
-                </div>
-              </CardContent>
+             
 
-              <CardActions>
+                  <CardActions sx={{ padding: '0px !important', margin: '0px !important'}}>
               <Link href='https://makerdao.com/en/whitepaper#the-dai-stablecoin'>
               <Button
-                  sx={{
-                    color: 'rgba(102, 197, 107, .85)',
-                    fontWeight: 'medium',
-                    fontSize: 16,
-                  }}
+                  variant='outlined'
+                  color='primary'
+                    sx={{
+                      color: 'rgba(33, 33, 33, .85)',
+                      fontWeight: 'medium',
+                      fontSize: 16,
+                    }}
                 >
                   Learn about DAI
                 </Button>
             </Link>
                 
               </CardActions>
+              </CardContent>
+
+
             </Card>
           </Slide>
         </Grid>
 
-        <Grid xs={12} md={12} lg={4} height="100%" item>
+        <Grid xs={12} md={12} lg={4} item>
           <Slide
             timeout={1500}
             direction="up"
@@ -162,39 +158,41 @@ const ModularityAcknowledgement = () => {
               className={classes.modularSectionCard}
             >
               <CardContent className={classes.modularSectionCardContent}>
-                <img src="/shield.png" className={classes.icon} />
+              <img src="/kleros_logo.svg" style={{ width: 60, height: 60}} />
 
-                <div>
+
                   <Typography
                     width="90%"
-                    height={80}
-                    fontWeight="regular"
-                    fontSize={20}
-                    color='rgba(33, 33, 33, .85)'
+                    fontWeight="bold"
+                    fontSize={25}
                   >
-                    Dispute protection by Kleros
+                    Dispute protection
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aliquam eu justo et tortor tempus pulvinar.
+                  <Typography width='85%' fontWeight="normal" color='rgba(33, 33, 33, 0.85)' fontSize={15} noWrap={false}>
+                  Build decentralized apps on a developer-friendly platform that features low fees, high speeds, and infinite scalability.
                   </Typography>
-                </div>
-              </CardContent>
               
-              <CardActions>
+
+                <CardActions sx={{ padding: '0px !important', margin: '0px !important'}}>
               <Link href='https://kleros.io/#'>
               <Button
-                  sx={{
-                    color: 'rgba(102, 197, 107, .85)',
-                    fontWeight: 'medium',
-                    fontSize: 16,
-                  }}
+                  variant='outlined'
+                  color='primary'
+                    sx={{
+      
+                      color: 'rgba(33, 33, 33, .85)',
+                      fontWeight: 'medium',
+                      fontSize: 16,
+                    }}
                 >
                   Learn about Kleros
                 </Button>
             </Link>
               </CardActions>
+              </CardContent>
+              
+
             </Card>
           </Slide>
         </Grid>

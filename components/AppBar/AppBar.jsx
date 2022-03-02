@@ -34,6 +34,7 @@ const AppBar = () => {
           alignItems="center"
         >
           <Grid item className={classes.flexedGridItem}>
+            <img src='/logo2.png' style={{width: 40, height: 40 }} />
             <Link href='/'>
             <Typography className={classes.link} variant="h6" mx={2} color='#fff'>
               Opportunity
