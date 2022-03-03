@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => {
 
     appbarPaper: {
       backgroundColor: '#212121',
-      padding: '0% 12%',
+      padding: '2% 12%',
       display: 'flex',
       alignItems: 'center',
       color: '#fff'

@@ -2,9 +2,16 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => {
   return {
+
+    textContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start'
+    },
    
     section: {
-      padding: '5% 12%',
+      padding: '5% 8%',
       width: '100%',
     },
 
@@ -24,6 +31,7 @@ const useStyles = makeStyles(() => {
       introductionSectionGrid: {
         flex: 1,
         width: '100vw',
+        padding: '5% 8%',
       },
 
       appbar: {

@@ -4,7 +4,10 @@ import {
   Fade,
   Link,
   Paper,
+  Box,
   IconButton,
+  Button,
+  Card,
   Typography,
 } from '@mui/material'
 import useStyles from './HeroStyles'
@@ -12,40 +15,41 @@ import MarketDisplay from '../MarketDisplay/MarketDisplay'
 import Marquee from 'react-fast-marquee'
 import useInterval from 'react-useinterval'
 import AppBar from '../AppBar/AppBar'
+import { ArrowRight } from '@mui/icons-material'
 
 const MARKETS = [
-    {
-        market: 'Development & IT',
-        related: ['Computer Support', 'Software Developer', 'Cybersecurity', 'Computer Research Scientist']
-    },
-    {
-        market: 'Sales & Marketing',
-        related: ['Social Media Marketer' ]
-    },
-    {
-        market: 'Writing & Translation',
-        related: ['Content Translator', 'Cross Language Translator']
-    },
-    {
-        market: 'Admin & Customer Support',
-        related: ['Human Resource Manager', 'Customer Support Caller']
-    },
-    {
-        market: 'Finance & Accounting',
-        related: ['Accountant', 'Auditor']
-    },
-    {
-        market:  'Design & Creative',
-        related: ['Graphic Designer', 'UI/UX Designer', 'Photographer', 'Film & Video Editor']
-    },
-    {
-        market: 'Engineering & Architecture',
-        related: ['Architect', 'AutoCAD Drafter' ]
-    },
-    {
-        market: 'Deploy your own',
-        related: ['Ride Sharing', 'Food Delivery']
-    },
+  {
+    market: 'Development & IT',
+    related: ['Computer Support', 'Software Developer', 'Cybersecurity', 'Computer Research Scientist']
+  },
+  {
+    market: 'Sales & Marketing',
+    related: ['Social Media Marketer']
+  },
+  {
+    market: 'Writing & Translation',
+    related: ['Content Translator', 'Cross Language Translator']
+  },
+  {
+    market: 'Admin & Customer Support',
+    related: ['Human Resource Manager', 'Customer Support Caller']
+  },
+  {
+    market: 'Finance & Accounting',
+    related: ['Accountant', 'Auditor']
+  },
+  {
+    market: 'Design & Creative',
+    related: ['Graphic Designer', 'UI/UX Designer', 'Photographer', 'Film & Video Editor']
+  },
+  {
+    market: 'Engineering & Architecture',
+    related: ['Architect', 'AutoCAD Drafter']
+  },
+  {
+    market: 'Deploy your own',
+    related: ['Ride Sharing', 'Food Delivery']
+  },
 ]
 
 const INTRO_TEXT_TRANSLATIONS = [
@@ -99,59 +103,77 @@ const Hero = () => {
       <Grid
         className={classes.introductionSectionGrid}
         container
-        direction="column"
+        direction="columb"
         alignItems="center"
         justifyContent="space-evenly"
       >
-        <Grid flexGrow={1} container item alignItems="center" justify="center">
-          <Fade
-  
-            appear={false}
-            in={fade}
-            timeout={200}
-            onExited={() => {
-              if (currIntroTextIndex == INTRO_TEXT_TRANSLATIONS.length - 1) {
-                setCurrIntorTextIndex(0)
-              } else {
-                setCurrIntorTextIndex((prevState) => prevState + 1)
-              }
+        <Grid flexGrow={1} container item direction='row' alignItems="center" justifyContent="space-evenly">
+          <Grid className={classes.textContainer} item flexGrow={1}>
+          <Typography py={1} fontSize={40} fontWeight='bold' variant='h6' >
+            Permissionless and trustless
+          </Typography>
+          <Typography py={1} noWrap fontSize={40} fontWeight='bold' variant='h6' >
+            Labor Markets, <Typography component='span' fontSize={40} fontWeight='light'> Africa </Typography> 
+          </Typography>
 
-              setFirstText(INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].first)
-              setBodyText(INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].body)
-            }}
-          >
-            <div className={classes.introductionTextContainer}>
-              <Typography
-                py={2}
-                fontSize={40}
-                color="rgba(33, 33, 33, .85)"
-                fontWeight="medium"
-                width="80%"
-              >
-                {firstText}
-              </Typography>
-              <Typography
-                width="80%"
-                variant="body1"
-                fontSize={15}
-                color="#8f8f8f"
-              >
-                {bodyText}
-              </Typography>
-            </div>
-          </Fade>
+
+          <Box my={3} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-start'}}>
+          <Button  endIcon={<ArrowRight />} color='secondary' variant='contained' disableElevation sx={{mx: 1, p: 2, borderRadius: 20}}>
+              Read the whitepaper
+            </Button>
+
+            <Button variant='text' sx={{fontSize: 15, mx: 1 }}>
+              Learn more
+            </Button>
+          </Box>
+
+
+          </Grid>
+
+          <Grid item flexGrow={1} py={1} alignSelf='center' sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }}>
+          <img src='/lighter-graph.png' />
+          </Grid>
         </Grid>
 
-        <Grid item my={6} width="100%">
-          <Marquee>
-            {MARKETS.map(market => {
-              return <MarketDisplay marketTitle={market.market} related={market.related} />
-            })}
-          </Marquee>
+        <Grid flexGrow={1} container item sx={{width: '100%' }}>
+        <div style={{width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <Typography fontSize={20} >
+                Powered by
+              </Typography>
+            </div>
+
+        <Grid container item justifyContent='space-evenly'  alignItems='center' direction='row' flexGrow={1} my={1} width="100%">
+          <Grid item xs={4}>
+          <Box component={Card} elevation={0} sx={{padding: 2, mx: 1, height: 210, borderRadius: 4}} variant='outlined'>
+              Hello
+            </Box>
+          </Grid>
+
+          <Grid item xs={4}>
+          <Box component={Card} elevation={0} sx={{padding: 2, mx: 1, height: 210, borderRadius: 4}} variant='outlined'>
+              Hello
+            </Box>
+          </Grid>
+
+          <Grid item xs={4}>
+          <Box component={Card} elevation={0} sx={{padding: 2, mx: 1, height: 210, borderRadius: 4}} variant='outlined'>
+              Hello
+            </Box>
+          </Grid>
+        </Grid>
         </Grid>
       </Grid>
     </section>
   )
 }
 
+/*
+
+  <Marquee>
+            {MARKETS.map(market => {
+              return <MarketDisplay marketTitle={market.market} related={market.related} />
+            })}
+          </Marquee>
+
+          */
 export default Hero

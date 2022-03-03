@@ -47,7 +47,7 @@ const Learn = () => {
   return (
     <section 
     ref={sectionRef} 
-    style={{ backgroundColor: '#fbfbfd' }} 
+    style={{ backgroundColor: '#fff' }} 
     className={classes.section}>
       <Grid
         p={3}
