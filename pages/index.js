@@ -4,11 +4,16 @@ import styles from '../styles/Home.module.css';
 import {
   Button,
   Card,
+  CardContent,
+
   Grid,
   ThemeProvider,
   Typography,
   Box
 } from '@mui/material';
+import {
+  ArrowRight
+} from '@mui/icons-material'
 import Link from 'next/link'
 import { themeOptions } from '../material_theme';
 import useStyles from '../styles/styles';
@@ -69,141 +74,150 @@ export default function Home() {
 
     {/* Section 4 */}
     <section className={classes.section} style={{ backgroundColor: '#fff'}}>
-             <Grid spacing={10} container direction="row" justifyContent="space-evenly" alignItems='flex-start'>
-               <Grid style={{flex: 1.5}} item className={classes.fullGrid}>
+             <Grid spacing={10} container direction="row" justifyContent="center" alignItems='center'>
+               <Grid item>
                  <Card elevation={4} 
                  style={{ 
-                   width: '100%', 
-                   height: 500, 
+                   width: 1050, 
+                   height: 620, 
                    boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'
                    }}>
-
+                    <img src='website.png' style={{ width: '100%', height: '100%' }} />
                  </Card>
-                 <Typography py={3} color="#fff" fontWeight="regular" width='80%'>
+                 <Typography py={3} color="rgba(33, 33, 33, .85)" fontWeight="regular" width='80%'>
                    The simplest way to work without worrying about KYC, a bank account or unnecessary
                    documentation.
                  </Typography>
                </Grid>
 
-               <Grid style={{flex: 1}} item className={classes.fullGrid}>
-                 <Card 
-                 variant='outlined'
-                 elevation={0}
-                 style={{
-                   padding: 30, 
-                   width: '100%', 
-                   height: 210,
-                  // boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' 
-                   }}>
-                   <Typography fontWeight='medium' color='rgb(33, 33, 33, .85)'>
-                     OPPORTUNITY
-                   </Typography>
-
-                   <Grid height={'100%'} container item direction='column' flex={1} justifyContent='space-evenly'>
-                     <Grid item>
-                     <Typography fontWeight='light' fontSize={15}>
-                     Earn TIP when you complete jobs
-                     </Typography>
-                     </Grid>
-
-                     <Grid item>
-                     <Typography fontWeight='light' fontSize={15}>
-                     Work without KYC or other certifications
-                     </Typography>
-                     </Grid>
-
-                     <Grid item>
-                     <Typography fontWeight='light' fontSize={15}>
-                     Lower fees than most freelancing platforms
-                     </Typography>
-                     </Grid>
-
-                     <Grid item>
-                     <Typography fontWeight='light' fontSize={15}>
-                     Transfers and payouts in a global and decentralized currency
-                     </Typography>
-                     </Grid>
-                   </Grid>
-
-                 </Card>
-                 
-                 <Button
-                   sx={{ padding: 2, margin: '50px 0px' }}
-                   variant="outlined"
-                  className={classes.learnMoreButton}
-                >
-                  Learn more
-                </Button>
-                <Grid
-                  container
-                  item
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="space-between"
-                >
-                  <Grid item>
-                    <Button variant="text" className={classes.textButton}>
-                      Markets
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button variant="text" className={classes.textButton}>
-                      Contracts
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button variant="text" className={classes.textButton}>
-                      Messenger
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button variant="text" className={classes.textButton}>
-                      Profile
-                     </Button>
-                   </Grid>
-                 </Grid>
-
-
-
-
-
-               </Grid>
+             
              </Grid>
            </section>
 
-<Box my={2} sx={{width: '100vw' }}>
-<Marquee>
-            {MARKETS.map(market => {
-              return <MarketDisplay marketTitle={market.market} related={market.related} />
-            })}
-          </Marquee>
-</Box>
+           <section className={classes.section}>
+           <Grid flexGrow={1} container item sx={{width: '100%' }}>
+        <div style={{width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <Typography fontSize={20} >
+                Powered by
+              </Typography>
+            </div>
+
+        <Grid container item spacing={2}  alignItems='center' direction='row' flexGrow={1} my={1} width="100%">
+          <Grid item xs={4}>
+          <Card className={classes.card} elevation={5} sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' }}  variant='elevation'>
+             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+
+              <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
+                  Decentralized Labor Markets
+                </Typography>
+
+                <Typography color='rgba(33, 33, 33, .85)' fontWeight='bold' fontSize={14}>
+                  Exchange Tech
+                </Typography>
+              </Box>
+
+            <Box>
+            <Typography fontSize={25} fontWeight='bold'>
+                Opportunity
+              </Typography>
+              <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
+                Best technology results-driven web design and amrketing agency
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              View Case Study
+            </Button>
+
+            <img src="/logo2.png" style={{ width: 30, height: 30 }} />
+            </Box>
+
+            </CardContent>
+            </Card>
+          </Grid>
+
+
+          <Grid item xs={4}>
+          <Card className={classes.card} elevation={5} sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' }}  variant='elevation'>
+             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+
+              <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
+                  Decentralized Stablecoin
+                </Typography>
+
+                <Typography color='rgba(33, 33, 33, .85)' fontWeight='bold' fontSize={14}>
+                  Exchange Tech
+                </Typography>
+              </Box>
+
+            <Box>
+            <Typography fontSize={25} fontWeight='bold'>
+                DAI
+              </Typography>
+              <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
+                Best technology results-driven web design and amrketing agency
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              View Case Study
+            </Button>
+
+            <img
+                  src="/dai_logo2.png"
+                  style={{ width: 35, height: 35 }}
+                />
+            </Box>
+
+            </CardContent>
+            </Card>
+          </Grid>
+
+          <Grid item xs={4}>
+          <Card className={classes.card} elevation={15} variant='elevation'>
+             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+
+              <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
+                <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
+                  Decentralized Justice
+                </Typography>
+
+                <Typography color='rgba(33, 33, 33, .85)' fontWeight='bold' fontSize={14}>
+                  Legal Tech
+                </Typography>
+              </Box>
+
+            <Box>
+            <Typography fontSize={25} fontWeight='bold'>
+                Kleros
+              </Typography>
+              <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
+                Best technology results-driven web design and amrketing agency
+              </Typography>
+            </Box>
+
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              View Case Study
+            </Button>
+
+            <img src="/kleros_logo.svg" style={{ width: 30, height: 30 }} />
+            </Box>
+
+            </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        </Grid>
+           </section>
 
 
     <Learn />
 
-    <section className={classes.section} style={{ backgroundColor: '#fbfbfd' }}>
-    <Grid my={1} width='100%' container direction='row' justifyContent='center' alignItems='center'>
-        <Grid item mx={5}>
-          <Button disabled className={classes.button}  variant='outlined'>
-            Read the Developer Docs
-          </Button>
-        </Grid>
-
-        <Grid item mx={5}>
-        <Link href='https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec'>
-        <Button className={classes.button} variant='outlined'>
-            Read the Whitepaper
-          </Button>
-              </Link>
-         
-        </Grid>
-      </Grid>
-    </section>
-
-        {/*}  <InformationalOne /> */}
-
-          <ModularityAcknowledgement />
 
           <Footer />
         </main>

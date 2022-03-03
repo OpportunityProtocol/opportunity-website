@@ -22,13 +22,17 @@ const useStyles = makeStyles(() => {
     },
 
     worldImg: {
-      opacity: 0.4, width: '80%', height: 250
+      opacity: 0.4, width: '80%', height: 190
     },
 
     gridContainer: {
       backgroundColor: 'transparent',
       borderRadius: 8,
       border: '1px solid #eee',
+    },
+
+    worldConntainer: {
+
     }
   };
 });

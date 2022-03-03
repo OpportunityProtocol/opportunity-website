@@ -58,12 +58,12 @@ const ModularityAcknowledgement = () => {
           >
             <Card elevation={0} variant='outlined' className={classes.modularSectionCard}>
               <CardContent className={classes.modularSectionCardContent}>
-                <img src="/globe.png" className={classes.icon} />
+                <img src="/logo2.png" style={{ width: 60, height: 60 }} />
 
                 <div>
                   <Typography
                     width="90%"
-                    height={80}
+           
                     fontWeight="regular"
                     fontSize={20}
                     color='rgba(33, 33, 33, .85)'
@@ -71,7 +71,7 @@ const ModularityAcknowledgement = () => {
                     Global access to markets on Opportunity
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
+                  <Typography paragraph fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>
@@ -106,17 +106,15 @@ const ModularityAcknowledgement = () => {
               variant="outlined"
               className={classes.modularSectionCard}
             >
-              <CardContent className={classes.modularSectionCardContent}>
+
                 <img
-                  src="/exchange.png"
-                  className={classes.icon}
-                  style={{ width: '40px' }}
+                  src="/dai_logo2.png"
+                  style={{ width: 60, height: 60 }}
                 />
 
                 <div>
                   <Typography
                     width="90%"
-                    height={80}
                     fontWeight="regular"
                     fontSize={20}
                     color='rgba(33, 33, 33, .85)'
@@ -124,14 +122,14 @@ const ModularityAcknowledgement = () => {
                     Stable exchange through DAI
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
+                  <Typography paragraph  fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>
                 </div>
-              </CardContent>
+   
 
-              <CardActions>
+              <CardActions sx={{ margin: '0px !important', padding: '0px !important'}}>
               <Link href='https://makerdao.com/en/whitepaper#the-dai-stablecoin'>
               <Button
                   sx={{
@@ -162,12 +160,11 @@ const ModularityAcknowledgement = () => {
               className={classes.modularSectionCard}
             >
               <CardContent className={classes.modularSectionCardContent}>
-                <img src="/shield.png" className={classes.icon} />
+                <img src="/kleros_logo.svg" style={{ width: 60, height: 60 }} />
 
                 <div>
                   <Typography
                     width="90%"
-                    height={80}
                     fontWeight="regular"
                     fontSize={20}
                     color='rgba(33, 33, 33, .85)'
@@ -175,7 +172,7 @@ const ModularityAcknowledgement = () => {
                     Dispute protection by Kleros
                   </Typography>
 
-                  <Typography fontWeight="light" noWrap={false}>
+                  <Typography paragraph fontWeight="light" noWrap={false}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam eu justo et tortor tempus pulvinar.
                   </Typography>

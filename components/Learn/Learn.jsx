@@ -109,10 +109,15 @@ const Learn = () => {
           lg={6}
           my={4}
         >
+
+          <div className={classes.worldContainer} style={{border: '1px solid #eee', borderRadius: 999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 40}}>
           <img
             src="/world.png"
             className={classes.worldImg}
           />
+          </div>
+
+
         </Box>
       </Grid>
     </section>
