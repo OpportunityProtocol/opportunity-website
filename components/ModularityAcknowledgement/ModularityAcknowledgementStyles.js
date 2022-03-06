@@ -19,10 +19,18 @@ const useStyles = makeStyles(() => {
     },
 
     modularSectionCardContent: {
-      //padding: 20,
+      height: 250,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
+    },
+
+    modularCardBox: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
     },
 
     fullElement: {
@@ -32,6 +40,12 @@ const useStyles = makeStyles(() => {
 
     learnMoreButton: {
       backgroundColor: 'transparent'
+    },
+    container: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
     }
   };
 });

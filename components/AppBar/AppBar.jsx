@@ -18,8 +18,7 @@ const AppBar = () => {
     <Paper
       className={classes.appbarPaper}
       square={true}
-      classes={{ outlined: classes.appbar }}
-      variant="outlined"
+      elevation={0}
     >
       <Box
         sx={{

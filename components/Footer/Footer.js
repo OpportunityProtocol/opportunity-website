@@ -11,8 +11,8 @@ export default function Footer() {
   return (
     <Box className={classes.footer}>
       <Grid container direction='row' alignItems="flex-start" justifyContent="space-between">
-          <Grid item style={{display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flex: 1}}>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}className={classes.column} >
+          <Grid item className={classes.contentContainer}>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <Typography variant='h6'>GigEarth</Typography>
               <Typography fontWeight="light"  >Permissionless labor markets</Typography>
               </Box>

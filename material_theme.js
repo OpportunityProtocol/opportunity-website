@@ -27,6 +27,10 @@ export const themeOptions = createTheme({
     MuiButton: {
       textTransform: 'none',
     },
- 
+    MuiDivider: {
+      backgroundColor: 'red',
+      color: 'red',
+      border: '1px solid red'
+    }
   }
 });

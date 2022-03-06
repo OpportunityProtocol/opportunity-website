@@ -95,17 +95,17 @@ const COMPONENTS = [
 const renderIcon = (component) => {
   switch (component) {
     case 'Users':
-      return <FaUserFriends fontSize='large' color="#42c976" />
+      return <FaUserFriends fontSize="large" color="#42c976" />
     case 'Markets':
-      return <MdWork fontSize='large' color="#42c976" />
+      return <MdWork fontSize="large" color="#42c976" />
     case 'Relationships':
-      return <GoGlobe fontSize='large' color="#42c976" />
+      return <GoGlobe fontSize="large" color="#42c976" />
     case 'Escrows':
-      return <FaFileContract fontSize='large' color="#42c976" />
+      return <FaFileContract fontSize="large" color="#42c976" />
     case 'Reviews':
-      return <AiFillWechat fontSize='large' color="#42c976" />
+      return <AiFillWechat fontSize="large" color="#42c976" />
     case 'Trust':
-      return <VscWorkspaceTrusted fontSize='large' color="#42c976" />
+      return <VscWorkspaceTrusted fontSize="large" color="#42c976" />
     default:
   }
 }

@@ -10,9 +10,11 @@ const useStyles = makeStyles(() => {
             display: 'flex',
             flexDirection: 'column'
         },
-        column: {
-  
-          
+        contentContainer: {
+            display: 'flex', 
+            alignItems: 'flex-start', 
+            justifyContent: 'space-between', 
+            flex: 1 
         }
     }
 })

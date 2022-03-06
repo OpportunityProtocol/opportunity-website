@@ -44,6 +44,14 @@ const useStyles = makeStyles(() => {
       width: '100%', 
       height: 'auto', 
       padding: 20
+    },
+    card: {
+      width: '100%',
+    boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
+    },
+
+    img: {
+      width: '100%', height: '100%'
     }
 
   };

@@ -39,14 +39,7 @@ const ModularityAcknowledgement = () => {
       }}
     >
       <Grid flexGrow={1} container item sx={{ width: '100%' }}>
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-          }}
-        >
+        <div className={classes.container}>
           <Typography variant="h4" color="rgba(33, 33, 33, .85)">
             Powered by
           </Typography>
@@ -87,23 +80,8 @@ const ModularityAcknowledgement = () => {
                     'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
                 }}
               >
-                <CardContent
-                  sx={{
-                    height: 250,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                    }}
-                  >
+                <CardContent className={classes.modularSectionCardContent}>
+                  <Box className={classes.modularCardBox}>
                     <Typography
                       color="rgba(33, 33, 33, .85)"
                       fontSize={13}
@@ -177,28 +155,11 @@ const ModularityAcknowledgement = () => {
                 className={classes.card}
                 variant="outlined"
                 elevation={0}
-                sx={{
-                  backgroundColor:
-                    'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
-                }}
+                sx={{ bgcolor: 'transparent' }}
               >
                 <CardContent
-                  sx={{
-                    height: 250,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                    }}
-                  >
+                className={classes.modularSectionCardContent}>
+                  <Box className={classes.modularCardBox}>
                     <Typography
                       color="rgba(33, 33, 33, .85)"
                       fontSize={13}
@@ -278,23 +239,8 @@ const ModularityAcknowledgement = () => {
                     'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
                 }}
               >
-                <CardContent
-                  sx={{
-                    height: 250,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: '100%',
-                      display: 'flex',
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                    }}
-                  >
+                <CardContent className={classes.modularSectionCardContent}>
+                  <Box className={classes.modularCardBox}>
                     <Typography
                       color="rgba(33, 33, 33, .85)"
                       fontSize={13}

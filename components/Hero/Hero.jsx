@@ -25,36 +25,12 @@ const Hero = () => {
   return (
     <section className={classes.introductionSection}>
       <AppBar />
-      <Box
-        sx={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          position: 'relative',
-        }}
-      >
+      <Box className={classes.container}>
         <img
           src="/girl.jpeg"
-          style={{
-            width: '90%',
-            height: '90%',
-            borderRadius: 20,
-          }}
+          className={classes.img}
         />
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'rgba(0,0,0,.5)',
-            borderRadius: 20,
-            position: 'absolute',
-            width: '90%',
-            height: '90%',
-          }}
+        <div className={classes.shadowyDiv}
         >
           <Box
             sx={{
@@ -85,7 +61,7 @@ const Hero = () => {
               <Button
                 endIcon={<ArrowRight />}
                 disableElevation
-                sx={{ alignSelf: 'flex-start', p: 1.5, borderRadius: 20 }}
+                className={classes.button}
                 color="secondary"
                 variant="contained"
               >
@@ -100,7 +76,7 @@ const Hero = () => {
               <Button
                 endIcon={<ArrowRight />}
                 disableElevation
-                sx={{ alignSelf: 'flex-start', p: 1.5, borderRadius: 20 }}
+                className={classes.button}
                 color="primary"
                 variant="contained"
               >
