@@ -35,7 +35,7 @@ const InformationalOne = () => {
 
               textAlign='center'
             >
-              Opportunity Protocol
+              GigEarth
             </Typography>
             <Typography fontSize={20} width='80%'  textAlign='center' fontWeight='light' color="rgba(33, 33, 33, 0.85)">
               Create or participate in permission-less labor markets built on top of a behavioral graph of employers and workers.

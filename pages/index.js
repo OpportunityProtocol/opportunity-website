@@ -18,7 +18,7 @@ import Link from 'next/link'
 import { themeOptions } from '../material_theme';
 import useStyles from '../styles/styles';
 import Footer from '../components/Footer/Footer';
-
+import { alpha } from '@mui/material/styles';
 import ModularityAcknowledgement from '../components/ModularityAcknowledgement/ModularityAcknowledgement';
 import Hero from '../components/Hero/Hero';
 import Head from '../components/Head/Head';
@@ -74,6 +74,7 @@ export default function Home() {
 
     {/* Section 4 */}
     <section className={classes.section} style={{ backgroundColor: '#fff'}}>
+      
              <Grid spacing={10} container direction="row" justifyContent="center" alignItems='center'>
                <Grid item>
                  <Card elevation={4} 
@@ -82,11 +83,10 @@ export default function Home() {
                    height: 620, 
                    boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'
                    }}>
-                    <img src='website.png' style={{ width: '100%', height: '100%' }} />
+                    <img src='gigearth.png' style={{ width: '100%', height: '100%' }} />
                  </Card>
-                 <Typography py={3} color="rgba(33, 33, 33, .85)" fontWeight="regular" width='80%'>
-                   The simplest way to work without worrying about KYC, a bank account or unnecessary
-                   documentation.
+                 <Typography py={3} color="rgba(33, 33, 33, .85)" fontWeight="bold" fontSize={18} width='80%'>
+                 GigEarth is a decentralized application built to provide access to labor markets regardless of geographical location or social class
                  </Typography>
                </Grid>
 
@@ -94,18 +94,24 @@ export default function Home() {
              </Grid>
            </section>
 
-           <section className={classes.section}>
+           <Box className={classes.section} sx={{ backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3) }}>
            <Grid flexGrow={1} container item sx={{width: '100%' }}>
-        <div style={{width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start'}}>
-              <Typography fontSize={20} >
-                Powered by
-              </Typography>
+        <div style={{width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start'}}>
+        <Typography variant="h4" color="rgba(33, 33, 33, .85)">Powered by</Typography>
+        <Typography
+            py={3}
+            color="rgba(33, 33, 33, 0.85)"
+            fontWeight="regular"
+            width="90%"
+          >
+            GigEarth operates using existing and proven web3 protocols.
+          </Typography>
             </div>
 
         <Grid container item spacing={2}  alignItems='center' direction='row' flexGrow={1} my={1} width="100%">
           <Grid item xs={4}>
-          <Card className={classes.card} elevation={5} sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' }}  variant='elevation'>
-             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+          <Card className={classes.card} variant='outlined' elevation={0} sx={{         backgroundColor: 'transparent', /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/ }}>
+             <CardContent sx={{height: 250,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
 
               <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
@@ -118,20 +124,20 @@ export default function Home() {
               </Box>
 
             <Box>
-            <Typography fontSize={25} fontWeight='bold'>
-                Opportunity
+            <Typography sx={{ color: 'rgba(33, 33, 33, .85)'}} fontSize={25} fontWeight='bold'>
+                GigEarth
               </Typography>
               <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
-                Best technology results-driven web design and amrketing agency
+                Explore permissionless labor markets regardless of geographical location or social class
               </Typography>
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
-              View Case Study
+            <Button color='primary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              Learn about GigEarth
             </Button>
 
-            <img src="/logo2.png" style={{ width: 30, height: 30 }} />
+            <img src="/logo.svg" style={{ width: 30, height: 30 }} />
             </Box>
 
             </CardContent>
@@ -140,8 +146,8 @@ export default function Home() {
 
 
           <Grid item xs={4}>
-          <Card className={classes.card} elevation={5} sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee' }}  variant='elevation'>
-             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+          <Card className={classes.card} variant='outlined' elevation={0} sx={{         backgroundColor: 'transparent', /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/ }}>
+             <CardContent sx={{height: 250,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
 
               <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
@@ -154,17 +160,17 @@ export default function Home() {
               </Box>
 
             <Box>
-            <Typography fontSize={25} fontWeight='bold'>
+            <Typography sx={{ color: 'rgba(33, 33, 33, .85)'}} fontSize={25} fontWeight='bold'>
                 DAI
               </Typography>
               <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
-                Best technology results-driven web design and amrketing agency
+                Earn money in a decentralized and stable cryptocurrency.  Off ramp using any centralized exchange of your choice.
               </Typography>
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
-              View Case Study
+            <Button color='primary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              Learn about DAI
             </Button>
 
             <img
@@ -178,8 +184,8 @@ export default function Home() {
           </Grid>
 
           <Grid item xs={4}>
-          <Card className={classes.card} elevation={15} variant='elevation'>
-             <CardContent sx={{height: 220,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+          <Card className={classes.card} variant='outlined' elevation={0} sx={{         backgroundColor: 'transparent', /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/ }}>
+             <CardContent sx={{height: 250,  display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
 
               <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
                 <Typography color='rgba(33, 33, 33, .85)' fontSize={13}  sx={{textTransform: 'uppercase'}}>
@@ -192,17 +198,17 @@ export default function Home() {
               </Box>
 
             <Box>
-            <Typography fontSize={25} fontWeight='bold'>
+            <Typography sx={{ color: 'rgba(33, 33, 33, .85)'}} fontSize={25} fontWeight='bold'>
                 Kleros
               </Typography>
               <Typography width='80%' color='rgba(33, 33, 33, .85)' paragraph pt={1} fontSize={15}>
-                Best technology results-driven web design and amrketing agency
+                Disputes are solved using the Kleros protocol.  Users escape the bias of centralized services on GigEarth.
               </Typography>
             </Box>
 
             <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-            <Button color='secondary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
-              View Case Study
+            <Button color='primary' variant='text' endIcon={<ArrowRight />} sx={{ margin: '0px !important', padding: '0px !important'}}>
+              Learn about Kleros
             </Button>
 
             <img src="/kleros_logo.svg" style={{ width: 30, height: 30 }} />
@@ -213,7 +219,7 @@ export default function Home() {
           </Grid>
         </Grid>
         </Grid>
-           </section>
+           </Box>
 
 
     <Learn />

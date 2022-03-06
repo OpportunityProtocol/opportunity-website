@@ -12,6 +12,11 @@ const useStyles = makeStyles(() => {
         position: 'relative',
         margin: '15px 0px',
         padding: 20,
+        minHeight: 120,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        justifyContent: 'center'
     },
 
     worldGridContainer: {

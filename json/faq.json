@@ -1,24 +1,24 @@
 {
    "faq": [
        {
-           "title": "What is the Opportunity protocol?",
-           "description": "Opportunity is a decentralized protocol for permission-less labor markets where users can find work and earn money in the simplest manner.  Opportunity will be accessible through desktop and mobile clients at the end of its development.  The Opportunity protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
+           "title": "What is GigEarth?",
+           "description": " GigEarth is a decentralized application for permission-less labor markets where users can find work and earn money in the simplest manner.   GigEarth will be accessible through desktop and mobile clients at the end of its development.  The  GigEarth protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
        },
        {
-        "title": "Is Opportunity a decentralized application or protocol?",
-        "description": "Both.  User's can interface with the protocol through the Opportunity client.  Since Opportunity is open source it can also be forked by developers for their own needs."
+        "title": "Is  GigEarth a decentralized application or protocol?",
+        "description": "Both.  User's can interface with the application through the GigEarth client.  Since  GigEarth is open source it can also be forked by developers for their own needs."
        },
        {
-        "title": "How is Opportunity different from other freelancing platforms?",
-        "description": "Opportunity is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and being deplatformed."
+        "title": "How is GigEarth different from other freelancing platforms?",
+        "description": " GigEarth is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and being deplatformed."
        },
        {
         "title": "What do you mean user's can deploy their own markets?",
-        "description": "User's can deploy their own labor markets on Opportunity and share  common data interface with the network.  These markets enable interoperability.  Examples include a decentralized uber or food delivery platform where user's want to instantly access past reivew data about worker on the network."
+        "description": "User's can deploy their own labor markets on GigEarth and share common data interface with the network.  This includes trust among users including employers and workers."
        },
        {
-        "title": "What do you mean by Opportunity seeks to be simple?",
-        "description": "Labor markets on Opportunity require no KYC or unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI or any other enabled currencies."
+        "title": "What do you mean by GigEarth seeks to be simple?",
+        "description": "Labor markets on GigEarth require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI or any other enabled currencies."
        }
    ]
 }

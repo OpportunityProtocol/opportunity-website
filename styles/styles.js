@@ -125,10 +125,7 @@ const useStyles = makeStyles(() => {
     },
 
     card: {
-      boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
-      '&:hover': {
-        boxShadow: '0px 8px 10px -5px #eee, 0px 16px 24px 2px #eee, 0px 6px 30px 5px #eee'
-      }
+     
     },
   };
 });

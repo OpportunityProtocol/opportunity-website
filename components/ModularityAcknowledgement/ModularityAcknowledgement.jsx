@@ -68,7 +68,7 @@ const ModularityAcknowledgement = () => {
                     fontSize={20}
                     color='rgba(33, 33, 33, .85)'
                   >
-                    Global access to markets on Opportunity
+                    Global access to markets on GigEarth
                   </Typography>
 
                   <Typography paragraph fontWeight="light" noWrap={false}>
@@ -87,7 +87,7 @@ const ModularityAcknowledgement = () => {
                   }}
                   
                 >
-                  Learn about Opportunity
+                  Learn about GigEarth
                 </Button>
               </CardActions>
             </Card>

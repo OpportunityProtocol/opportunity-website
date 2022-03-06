@@ -1,41 +1,42 @@
-import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from 'react'
+import IconButton from '@mui/material/IconButton'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
 import MenuIcon from '@mui/icons-material/Menu'
 
 import Link from 'next/link'
 
 const options = [
   {
-      title: 'Whitepaper V1',
-      link: 'https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec'
+    title: 'Whitepaper V1',
+    link:
+      'https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec',
   },
   {
     title: 'Discord',
-    link: 'https://discord.gg/pBRVWTQPvS'
-},
-{
+    link: 'https://discord.gg/pBRVWTQPvS',
+  },
+  {
     title: 'Github',
-    link: 'https://github.com/OpportunityProtocol/opportunity-core'
-},
-{
+    link: 'https://github.com/OpportunityProtocol/opportunity-core',
+  },
+  {
     title: 'FAQ',
-    link: '/faq'
-}
-];
+    link: '/faq',
+  },
+]
 
-const ITEM_HEIGHT = 48;
+const ITEM_HEIGHT = 48
 
 export default function LongMenu() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   return (
     <div>
@@ -47,7 +48,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MenuIcon style={{color: 'white'}} />
+        <MenuIcon style={{ color: 'white' }} />
       </IconButton>
       <Menu
         id="long-menu"
@@ -66,12 +67,16 @@ export default function LongMenu() {
       >
         {options.map((option) => (
           <Link href={option.link}>
-            <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-            {option.title}
-          </MenuItem>
+            <MenuItem
+              key={option}
+              selected={option === 'Pyxis'}
+              onClick={handleClose}
+            >
+              {option.title}
+            </MenuItem>
           </Link>
         ))}
       </Menu>
     </div>
-  );
+  )
 }
