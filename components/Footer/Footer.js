@@ -1,7 +1,8 @@
 import React from 'react';
 import useStyles from './FooterStyles';
 
-import { Box, Grid, Divider, Typography, Stack } from '@mui/material';
+import { Box, Grid, Divider, Typography } from '@mui/material';
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -17,20 +18,33 @@ export default function Footer() {
               </Box>
               <div className={classes.column}>
               <Typography>Explore</Typography>
-              <Typography fontWeight="light">Blog</Typography>
+              <Link href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec">
               <Typography fontWeight="light">Whitepaper</Typography>
-              <Typography fontWeight="light"  >Frequently Asked Questions</Typography>
+              </Link>
+              <Link href='/faq'>
+              <Typography fontWeight="light" >Frequently Asked Questions</Typography>
+              </Link>
               </div>
               <div className={classes.column}>
               <Typography>Contribute</Typography>
-              <Typography fontWeight="light"  >UI</Typography>
-              <Typography fontWeight="light"  >Core</Typography>
+              <Link href='https://github.com/OpportunityProtocol/opportunity-client'>
+              <Typography fontWeight="light" >Client</Typography>
+              </Link>
+              <Link href='https://github.com/OpportunityProtocol/opportunity-core'>
+              <Typography fontWeight="light" >Core</Typography>
+              </Link>
+              <Link href='https://github.com/OpportunityProtocol/opportunity-website'>
+              <Typography fontWeight="light" >Website</Typography>
+              </Link>
               </div>
               <div className={classes.column}>
               <Typography>Community</Typography>
-              <Typography fontWeight="light"  >Contact</Typography>
-              <Typography fontWeight="light"  >Discord</Typography>
-              <Typography fontWeight="light"  >Github</Typography>
+              <Link href="https://discord.gg/pBRVWTQPvS">
+              <Typography fontWeight="light" >Discord</Typography>
+              </Link>
+              <Link href="https://github.com/OpportunityProtocol/opportunity-core">
+              <Typography fontWeight="light" >Github</Typography>
+              </Link>
               </div>
             </Grid>
           </Grid>

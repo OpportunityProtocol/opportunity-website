@@ -11,7 +11,6 @@ import {
 import useStyles from './AppBarStyles'
 import Link from 'next/link'
 import LongMenu from '../LongMenu/LongMenu'
-import { ArrowRight } from '@mui/icons-material'
 
 const AppBar = () => {
   const classes = useStyles()
@@ -20,7 +19,6 @@ const AppBar = () => {
       className={classes.appbarPaper}
       square={true}
       classes={{ outlined: classes.appbar }}
-      elevation={0}
       variant="outlined"
     >
       <Box

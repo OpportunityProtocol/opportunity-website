@@ -95,17 +95,17 @@ const COMPONENTS = [
 const renderIcon = (component) => {
   switch (component) {
     case 'Users':
-      return <FaUserFriends color="#42c976" />
+      return <FaUserFriends fontSize='large' color="#42c976" />
     case 'Markets':
-      return <MdWork color="#42c976" />
+      return <MdWork fontSize='large' color="#42c976" />
     case 'Relationships':
-      return <GoGlobe color="#42c976" />
+      return <GoGlobe fontSize='large' color="#42c976" />
     case 'Escrows':
-      return <FaFileContract color="#42c976" />
+      return <FaFileContract fontSize='large' color="#42c976" />
     case 'Reviews':
-      return <AiFillWechat color="#42c976" />
+      return <AiFillWechat fontSize='large' color="#42c976" />
     case 'Trust':
-      return <VscWorkspaceTrusted color="#42c976" />
+      return <VscWorkspaceTrusted fontSize='large' color="#42c976" />
     default:
   }
 }
@@ -124,7 +124,7 @@ const Learn = () => {
 
   return (
     <React.Fragment>
-      <section ref={sectionRef} style={{}} className={classes.section}>
+      <section ref={sectionRef} className={classes.section}>
         <Typography variant="h4" color="rgba(33, 33, 33, .85)">
           Learn the components
         </Typography>
@@ -139,7 +139,7 @@ const Learn = () => {
         <Grid container spacing={4} direction="row" alignItems="center">
           {COMPONENTS.map(({ title, description }, idx, arr) => {
             return (
-              <Grid item xs={4}>
+              <Grid item sm={12} md={6} lg={4}>
                 <Fade in={cardsAnimated} timeout={1800 * (idx + 1)}>
                   <Card
                     key={title}
@@ -173,7 +173,7 @@ const Learn = () => {
         </Grid>
       </section>
 
-      <Box sx={{ width: '100vw', py: 5 }}>
+      <Box sx={{ py: 5 }}>
         <Marquee>
           {MARKETS.map((market) => {
             return (

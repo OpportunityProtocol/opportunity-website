@@ -48,7 +48,7 @@ export default function LongMenu() {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <MenuIcon style={{ color: 'white' }} />
+        <MenuIcon style={{ color: '#212121' }} />
       </IconButton>
       <Menu
         id="long-menu"

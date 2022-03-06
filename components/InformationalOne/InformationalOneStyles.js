@@ -3,8 +3,12 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => {
   return {
     section: {
+        margin: '100px 0px',
         padding: '5% 12%',
-        width: '100%',
+        display: 'flex',
+        alignItems: 'flex-start',
+        flexDirection: 'column',
+        justifyContent: 'center',
       },
       
     descriptionImage: {

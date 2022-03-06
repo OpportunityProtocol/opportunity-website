@@ -7,6 +7,7 @@ import {
   Box,
   IconButton,
   Typography,
+  Stack,
   Button,
   Card,
   CardContent,
@@ -26,8 +27,8 @@ const Hero = () => {
       <AppBar />
       <Box
         sx={{
-          width: '100vw',
-          height: '100vh',
+          width: '100%',
+          height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -40,7 +41,6 @@ const Hero = () => {
             width: '90%',
             height: '90%',
             borderRadius: 20,
-            position: 'relative',
           }}
         />
         <div
@@ -58,21 +58,26 @@ const Hero = () => {
         >
           <Box
             sx={{
-              width: '60%',
+              width: {
+                xs: '90%',
+                md: '60%'
+              },
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'flex-start',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <Typography
               py={2}
               color="#fff"
-              fontSize={45}
+              fontSize={40}
               fontWeight="bold"
-              textAlign="flex-start"
+              textAlign="center"
             >
               The simplest way to access global and permissionless labor markets
             </Typography>
+            <Stack direction='row' spacing={3}>
             <Link
               style={{ textDecoration: 'none' }}
               href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec"
@@ -84,9 +89,25 @@ const Hero = () => {
                 color="secondary"
                 variant="contained"
               >
-                Contribute to our grant
+                Funding
               </Button>
             </Link>
+
+            <Link
+              style={{ textDecoration: 'none' }}
+              href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec"
+            >
+              <Button
+                endIcon={<ArrowRight />}
+                disableElevation
+                sx={{ alignSelf: 'flex-start', p: 1.5, borderRadius: 20 }}
+                color="primary"
+                variant="contained"
+              >
+                GigEarth
+              </Button>
+            </Link>
+            </Stack>
           </Box>
         </div>
       </Box>

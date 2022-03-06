@@ -10,7 +10,6 @@ const useStyles = makeStyles(() => {
 
     section: {
       padding: '5% 12%',
-      width: '100%',
     },
 
     modularSectionCard: {
@@ -30,6 +29,10 @@ const useStyles = makeStyles(() => {
       width: '100%',
       height: '100%',
     },
+
+    learnMoreButton: {
+      backgroundColor: 'transparent'
+    }
   };
 });
 

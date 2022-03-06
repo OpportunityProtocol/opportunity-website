@@ -12,6 +12,16 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  flex: 1;
+}
+
+section {
+  display: block;
+}
+
+.appbarlink:hover  {
+  color: green;
 }

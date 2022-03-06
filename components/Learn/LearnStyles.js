@@ -5,7 +5,6 @@ const useStyles = makeStyles(() => {
    
     section: {
       padding: '5% 12%',
-      width: '100%',
     },
 
     learnCard: {
