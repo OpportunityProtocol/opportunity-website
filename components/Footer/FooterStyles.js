@@ -6,7 +6,8 @@ const useStyles = makeStyles(() => {
             width: '100vw',
             padding: '5% 15%',
             width: '100%',
-            backgroundColor: '#fbfbfd',
+            backgroundColor: '#212121',
+            color: '#fff',
             border: '1px solid #eee',
             display: 'flex',
             flexDirection: 'column'

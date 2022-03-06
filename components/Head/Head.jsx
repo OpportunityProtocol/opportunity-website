@@ -3,10 +3,10 @@ import Head from 'next/head';
 const Header = () => {
     return (
         <Head>
-        <title>Opportunity</title>
+        <title>GigEarth</title>
         <meta
           name="description"
-          content="A Decentralized and Permissionless Labor Market Protocol"
+          content="A Decentralized and Permissionless Labor Market Dapp"
         />
         <link rel="icon" href="/favicon.ico" />
 

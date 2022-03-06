@@ -2,9 +2,16 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => {
   return {
+
+    textContainer: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start'
+    },
    
     section: {
-      padding: '5% 12%',
+      padding: '5% 8%',
       width: '100%',
     },
 
@@ -22,8 +29,9 @@ const useStyles = makeStyles(() => {
       },
   
       introductionSectionGrid: {
-        flex: 1,
-        width: '100vw',
+        width: '100%',
+        padding: '0% 8%',
+        height: '100vh',
       },
 
       appbar: {
@@ -58,6 +66,15 @@ const useStyles = makeStyles(() => {
         alignItems: 'center',
         justifyContent: 'center',
       },
+
+      card: {
+       /* boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
+        '&:hover': {
+          boxShadow: '0px 8px 10px -5px #eee, 0px 16px 24px 2px #eee, 0px 6px 30px 5px #eee'
+        }*/
+
+      },
+      
   };
 });
 

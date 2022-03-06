@@ -123,6 +123,10 @@ const useStyles = makeStyles(() => {
       margin: '15px 0px',
       padding: 20,
     },
+
+    card: {
+     
+    },
   };
 });
 

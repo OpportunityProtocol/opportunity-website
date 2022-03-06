@@ -1,5 +1,5 @@
-# opportunity-website
-The website for the Opportunity permissionless platform.
+# GigEarth Website
+The website for the GigEarth permissionless platform.
 
 First, run the development server:
 

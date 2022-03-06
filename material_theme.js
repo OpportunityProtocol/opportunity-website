@@ -7,7 +7,7 @@ export const themeOptions = createTheme({
       main: "#212121",
     },
     secondary: {
-      main: "#66C56B",
+      main: "rgb(147, 227, 178)",
     },
     shadowyWhite: '#FBFBFD',
     blacks: {

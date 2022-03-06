@@ -8,11 +8,11 @@ const useStyles = makeStyles(() => {
     },
 
     appbarPaper: {
-      backgroundColor: '#212121',
-      padding: '0% 12%',
+      backgroundColor: '#fff',
+      padding: '2% 8%',
       display: 'flex',
       alignItems: 'center',
-      color: '#fff'
+      color: '#212121'
     },
 
     flexedGridItem: {

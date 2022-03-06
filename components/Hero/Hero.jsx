@@ -4,152 +4,92 @@ import {
   Fade,
   Link,
   Paper,
+  Box,
   IconButton,
   Typography,
+  Button,
+  Card,
+  CardContent,
 } from '@mui/material'
 import useStyles from './HeroStyles'
 import MarketDisplay from '../MarketDisplay/MarketDisplay'
 import Marquee from 'react-fast-marquee'
 import useInterval from 'react-useinterval'
 import AppBar from '../AppBar/AppBar'
-
-const MARKETS = [
-    {
-        market: 'Development & IT',
-        related: ['Computer Support', 'Software Developer', 'Cybersecurity', 'Computer Research Scientist']
-    },
-    {
-        market: 'Sales & Marketing',
-        related: ['Social Media Marketer' ]
-    },
-    {
-        market: 'Writing & Translation',
-        related: ['Content Translator', 'Cross Language Translator']
-    },
-    {
-        market: 'Admin & Customer Support',
-        related: ['Human Resource Manager', 'Customer Support Caller']
-    },
-    {
-        market: 'Finance & Accounting',
-        related: ['Accountant', 'Auditor']
-    },
-    {
-        market:  'Design & Creative',
-        related: ['Graphic Designer', 'UI/UX Designer', 'Photographer', 'Film & Video Editor']
-    },
-    {
-        market: 'Engineering & Architecture',
-        related: ['Architect', 'AutoCAD Drafter' ]
-    },
-    {
-        market: 'Deploy your own',
-        related: ['Ride Sharing', 'Food Delivery']
-    },
-]
-
-const INTRO_TEXT_TRANSLATIONS = [
-  {
-    first: 'Bringing the gig economy to the blockchain',
-    body:
-      'The Opportunity protocol envisions a future where every human has the ability to work regardless of geographical location or social status.',
-  },
-  {
-    first: 'Llevando la economia de conciertos a la cadena de bloques',
-    body:
-      'El Protocolo Opportunity prevé un futuro en el que cada ser humano tenga la capacidad de trabajar independientemente de su ubicación geográfica o estatus social.',
-  },
-  {
-    first: '将零工经济带入区块链',
-    body:
-      '機遇設想了一個未來，每個人都有能力工作，無論地理位置或社會地位如何。 沒有表格或不必要的文件。 連接錢包並開始工作。 就是這麼簡單。',
-  },
-  {
-    first: 'Apporter la gig economy à la blockchain',
-    body:
-      "Opportunity envisage un avenir où chaque être humain a la capacité de travailler indépendamment de sa situation géographique ou de son statut social. Pas de formulaires ou de documentation inutile. Connectez un portefeuille et travaillez. C'est aussi simple que ça.",
-  },
-]
+import { ArrowRight } from '@mui/icons-material'
 
 const Hero = () => {
   const classes = useStyles()
-  const [currIntroTextIndex, setCurrIntorTextIndex] = useState(0)
-  const [firstText, setFirstText] = useState(
-    INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].first,
-  )
-  const [bodyText, setBodyText] = useState(
-    INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].body,
-  )
-
-  const [fade, toggleFade] = useState(false)
-  const onToggleFade = () => toggleFade((prevState) => !prevState)
-
-  useInterval(
-    () => {
-      onToggleFade()
-    },
-    3200,
-    5,
-  )
 
   return (
     <section className={classes.introductionSection}>
       <AppBar />
-
-      <Grid
-        className={classes.introductionSectionGrid}
-        container
-        direction="column"
-        alignItems="center"
-        justifyContent="space-evenly"
+      <Box
+        sx={{
+          width: '100vw',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'relative',
+        }}
       >
-        <Grid flexGrow={1} container item alignItems="center" justify="center">
-          <Fade
-  
-            appear={false}
-            in={fade}
-            timeout={200}
-            onExited={() => {
-              if (currIntroTextIndex == INTRO_TEXT_TRANSLATIONS.length - 1) {
-                setCurrIntorTextIndex(0)
-              } else {
-                setCurrIntorTextIndex((prevState) => prevState + 1)
-              }
-
-              setFirstText(INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].first)
-              setBodyText(INTRO_TEXT_TRANSLATIONS[currIntroTextIndex].body)
+        <img
+          src="/girl.jpeg"
+          style={{
+            width: '90%',
+            height: '90%',
+            borderRadius: 20,
+            position: 'relative',
+          }}
+        />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(0,0,0,.5)',
+            borderRadius: 20,
+            position: 'absolute',
+            width: '90%',
+            height: '90%',
+          }}
+        >
+          <Box
+            sx={{
+              width: '60%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
             }}
           >
-            <div className={classes.introductionTextContainer}>
-              <Typography
-                py={2}
-                fontSize={40}
-                color="rgba(33, 33, 33, .85)"
-                fontWeight="medium"
-                width="80%"
+            <Typography
+              py={2}
+              color="#fff"
+              fontSize={45}
+              fontWeight="bold"
+              textAlign="flex-start"
+            >
+              The simplest way to access global and permissionless labor markets
+            </Typography>
+            <Link
+              style={{ textDecoration: 'none' }}
+              href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec"
+            >
+              <Button
+                endIcon={<ArrowRight />}
+                disableElevation
+                sx={{ alignSelf: 'flex-start', p: 1.5, borderRadius: 20 }}
+                color="secondary"
+                variant="contained"
               >
-                {firstText}
-              </Typography>
-              <Typography
-                width="80%"
-                variant="body1"
-                fontSize={15}
-                color="#8f8f8f"
-              >
-                {bodyText}
-              </Typography>
-            </div>
-          </Fade>
-        </Grid>
-
-        <Grid item my={6} width="100%">
-          <Marquee>
-            {MARKETS.map(market => {
-              return <MarketDisplay marketTitle={market.market} related={market.related} />
-            })}
-          </Marquee>
-        </Grid>
-      </Grid>
+                Contribute to our grant
+              </Button>
+            </Link>
+          </Box>
+        </div>
+      </Box>
     </section>
   )
 }
