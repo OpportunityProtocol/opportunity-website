@@ -9,7 +9,6 @@ const useStyles = makeStyles(() => {
 
     learnCard: {
         position: 'relative',
-        margin: '15px 0px',
         padding: 20,
         minHeight: 120,
         display: 'flex',
