@@ -3,12 +3,14 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => {
   return {
     section: {
-        margin: '100px 0px',
-        padding: '5% 12%',
+        height: '100vh',
+        padding: '5% 8%',
         display: 'flex',
         alignItems: 'flex-start',
         flexDirection: 'column',
         justifyContent: 'center',
+        background: 'rgb(147,227,178)',
+        background: 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,244,225,0.2455357142857143) 100%, rgba(147,227,178,1) 255%)'
       },
       
     descriptionImage: {
@@ -46,8 +48,7 @@ const useStyles = makeStyles(() => {
       padding: 20
     },
     card: {
-      width: '100%',
-    boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
+    //boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
     },
 
     img: {

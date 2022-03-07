@@ -19,6 +19,7 @@ const useStyles = makeStyles(() => {
     },
 
     modularSectionCardContent: {
+      color: '#fff',
       height: 250,
       display: 'flex',
       flexDirection: 'column',

@@ -6,19 +6,22 @@ import {
   Button,
   IconButton,
   Typography,
+  AppBar,
   Box,
 } from '@mui/material'
 import useStyles from './AppBarStyles'
 import Link from 'next/link'
 import LongMenu from '../LongMenu/LongMenu'
 
-const AppBar = () => {
+const AppBarBar = () => {
   const classes = useStyles()
   return (
     <Paper
       className={classes.appbarPaper}
       square={true}
       elevation={0}
+      component={AppBar}
+      position='sticky'
     >
       <Box
         sx={{
@@ -82,13 +85,12 @@ const AppBar = () => {
               Discord
             </Typography>
           </Link>
-        </Grid>
-        <Grid item>
+
           <Link href="/faq">
             <Typography
               className={classes.link}
-              mx={4}
-              fontWeight="bold"
+              fontSize={16}
+              mx={2}
               variant="button"
             >
               FAQ
@@ -100,4 +102,4 @@ const AppBar = () => {
   )
 }
 
-export default AppBar
+export default AppBarBar

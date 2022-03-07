@@ -54,10 +54,6 @@ const MARKETS = [
     market: 'Engineering & Architecture',
     related: ['Architect', 'AutoCAD Drafter'],
   },
-  {
-    market: 'Deploy your own',
-    related: ['Ride Sharing', 'Food Delivery'],
-  },
 ]
 
 const COMPONENTS = [

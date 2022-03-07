@@ -1,40 +1,73 @@
-import { Grid, Card, Typography, Button } from '@mui/material'
 
+import { Grid, Card, CardContent, Typography, Button } from '@mui/material'
+import { ArrowRight } from '@mui/icons-material'
 import useStyles from './InformationalOneStyles'
 
 const InformationalOne = () => {
   const classes = useStyles()
   return (
     <section className={classes.section}>
+      <Grid sx={{ p: 5, background: 'transparent' }} component={Card} elevation={0} container flexWrap='nowrap' justifyContent='space-between' direction='row' alignItems='flex-start'>
+
+      <Grid item>
+      <Typography
+        color="rgba(33, 33, 33, .85)"
+        fontWeight="medium"
+        fontSize={25}
+        px={2}
+        sx={{
+          width: '80%',
+        }}
+      >
+        What is GigEarth?
+      </Typography>
+      <Typography
+        color="rgba(33, 33, 33, .85)"
+        fontWeight="medium"
+        fontSize={16}
+        px={2}
+        py={1}
+        sx={{
+          width: '80%',
+        }}
+      >
+        A decentralized application serving as a gateway to unstoppable labor markets.
+      </Typography>
+      <Typography
+        color="rgba(33, 33, 33, .85)"
+        fontWeight="medium"
+        fontSize={16}
+        px={2}
+        py={1}
+        sx={{
+          width: '80%',
+        }}
+      >
+        Talent from anywhere in the world can engage in any digital based labor market.
+      </Typography>
+      <Button sx={{m: 2, borderRadius: 20, fontWeight: 'normal',}} size='large'  color='secondary' variant='contained' endIcon={<ArrowRight />}>
+        Take a peak
+      </Button>
+      </Grid>   
+
+            <Grid item>
       <Card
         sx={{
-          height: {
-            xs: 280,
-            sm: 420,
-            md: 550,
-            lg: 800,
-          },
+          width: 470,
+          height: 320,
+          borderRadius: 2, 
         }}
-        elevation={4}
+        elevation={10}
         className={classes.card}
       >
         <img src="gigearth.png" className={classes.img} />
       </Card>
-      <Typography
-        py={3}
-        color="rgba(33, 33, 33, .85)"
-        fontWeight="medium"
-        fontSize={18}
-        sx={{
-          width: {
-            xs: '100%',
-            md: '80%',
-          },
-        }}
-      >
-        GigEarth is a decentralized application built to provide access to labor
-        markets regardless of geographical location or social class.
-      </Typography>
+      </Grid>
+
+
+       </Grid>
+
+        
     </section>
   )
 }

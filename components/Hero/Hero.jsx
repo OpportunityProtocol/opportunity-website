@@ -24,7 +24,6 @@ const Hero = () => {
 
   return (
     <section className={classes.introductionSection}>
-      <AppBar />
       <Box className={classes.container}>
         <img
           src="/girl.jpeg"
@@ -69,20 +68,17 @@ const Hero = () => {
               </Button>
             </Link>
 
-            <Link
-              style={{ textDecoration: 'none' }}
-              href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec"
-            >
               <Button
                 endIcon={<ArrowRight />}
                 disableElevation
                 className={classes.button}
                 color="primary"
                 variant="contained"
+                onClick={() => ref.current.scrollIntoView()}
               >
                 GigEarth
               </Button>
-            </Link>
+
             </Stack>
           </Box>
         </div>

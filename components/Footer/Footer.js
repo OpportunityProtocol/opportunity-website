@@ -13,37 +13,40 @@ export default function Footer() {
       <Grid container direction='row' alignItems="flex-start" justifyContent="space-between">
           <Grid item className={classes.contentContainer}>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Typography variant='h6'>GigEarth</Typography>
+              <Box sx={{display: 'flex', alignItems: 'center' }}>
+                <img src='logo.svg' style={{width: 30, height: 30}} />
+              <Typography variant='h6' px={1}>GigEarth</Typography>
+              </Box>
               <Typography fontWeight="light"  >Permissionless labor markets</Typography>
               </Box>
               <div className={classes.column}>
               <Typography>Explore</Typography>
-              <Link href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec">
-              <Typography fontWeight="light">Whitepaper</Typography>
+              <Link href=''>
+              <Typography className={classes.link} fontWeight="light">Whitepaper</Typography>
               </Link>
-              <Link href='/faq'>
-              <Typography fontWeight="light" >Frequently Asked Questions</Typography>
+              <Link  href='/faq'>
+              <Typography className={classes.link}  fontWeight="light" >Frequently Asked Questions</Typography>
               </Link>
               </div>
               <div className={classes.column}>
               <Typography>Contribute</Typography>
-              <Link href='https://github.com/OpportunityProtocol/opportunity-client'>
-              <Typography fontWeight="light" >Client</Typography>
+              <Link href=''>
+              <Typography className={classes.link} fontWeight="light" >Client</Typography>
               </Link>
-              <Link href='https://github.com/OpportunityProtocol/opportunity-core'>
-              <Typography fontWeight="light" >Core</Typography>
+              <Link href=''>
+              <Typography className={classes.link} fontWeight="light" >Core</Typography>
               </Link>
-              <Link href='https://github.com/OpportunityProtocol/opportunity-website'>
-              <Typography fontWeight="light" >Website</Typography>
+              <Link href=''>
+              <Typography className={classes.link} fontWeight="light" >Website</Typography>
               </Link>
               </div>
               <div className={classes.column}>
               <Typography>Community</Typography>
-              <Link href="https://discord.gg/pBRVWTQPvS">
-              <Typography fontWeight="light" >Discord</Typography>
+              <Link   href="https://discord.gg/pBRVWTQPvS">
+              <Typography className={classes.link} fontWeight="light" >Discord</Typography>
               </Link>
               <Link href="https://github.com/OpportunityProtocol/opportunity-core">
-              <Typography fontWeight="light" >Github</Typography>
+              <Typography className={classes.link} fontWeight="light" >Github</Typography>
               </Link>
               </div>
             </Grid>
@@ -51,7 +54,7 @@ export default function Footer() {
       <Divider sx={{margin: '60px 0px'}} />
       <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <Typography fontWeight='light'>
-          Building with love for the world.  All code is open source at www.github.com/opportunityorganization
+          Building with love for the world.  All code is open source at <Link className={classes.link} href='www.github.com/opportunityorganization'>www.github.com/opportunityorganization</Link>
         </Typography>
       </Box>
     </Box>

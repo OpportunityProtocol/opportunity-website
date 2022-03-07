@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from '../styles/Home.module.css';
 import {
   Box,
@@ -20,7 +20,7 @@ import Hero from '../components/Hero/Hero';
 import Head from '../components/Head/Head';
 import Learn from '../components/Learn/Learn';
 import InformationalOne from '../components/InformationalOne/InformationalOne';
-
+import AppBar from '../components/AppBar/AppBar';
 
 const OUR_FEATURES = [
   'Fees: 2%',
@@ -38,10 +38,12 @@ const OTHER_PLATFORMS_FEATURES = [
   'Centralized and biased dispute resolution'
 ]
 export default function Home() {
+
   return (
     <ThemeProvider theme={themeOptions}>
       <div className={styles.container}>
         <Head />
+        <AppBar />
           <Hero />
           <InformationalOne />
           <ModularityAcknowledgement />

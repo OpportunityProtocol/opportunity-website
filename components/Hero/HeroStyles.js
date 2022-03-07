@@ -6,7 +6,8 @@ const useStyles = makeStyles(() => {
         height: 'calc(100vh - 80px)',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: '#fff',
+        background: 'rgb(255,255,255)',
+       background: 'linear-gradient(180deg, rgba(255,255,255,1) 8%, rgba(213,244,225,0.25) 100%, rgba(255,255,255,1) 255%)'
     },
     container: {
       width: '100%',

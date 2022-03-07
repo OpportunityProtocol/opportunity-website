@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles"
 
-const useStyles = makeStyles(() => {
+const useStyles = makeStyles((theme) => {
     return {
         footer: {
             padding: '5% 12%',
@@ -15,6 +15,12 @@ const useStyles = makeStyles(() => {
             alignItems: 'flex-start', 
             justifyContent: 'space-between', 
             flex: 1 
+        },
+        link: {
+            cursor: 'pointer',
+            '&:hover': {
+                color: 'rgb(147, 227, 178)'
+            }
         }
     }
 })

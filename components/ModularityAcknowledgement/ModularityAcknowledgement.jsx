@@ -35,17 +35,17 @@ const ModularityAcknowledgement = () => {
     <Box
       className={classes.section}
       sx={{
-        backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),
+        backgroundColor: '#212121',
       }}
     >
       <Grid flexGrow={1} container item sx={{ width: '100%' }}>
         <div className={classes.container}>
-          <Typography variant="h4" color="rgba(33, 33, 33, .85)">
+          <Typography variant="h4" color="#fff">
             Powered by
           </Typography>
           <Typography
             py={3}
-            color="rgba(33, 33, 33, 0.85)"
+            color="#fff"
             fontWeight="regular"
             width="90%"
           >
@@ -72,18 +72,17 @@ const ModularityAcknowledgement = () => {
               container={modularSectionRef.current}
             >
               <Card
-                className={classes.card}
                 variant="outlined"
                 elevation={0}
                 sx={{
+                  border: '1px solid #fff',
                   backgroundColor:
-                    'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
+                    'transparent'
                 }}
               >
                 <CardContent className={classes.modularSectionCardContent}>
                   <Box className={classes.modularCardBox}>
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontSize={13}
                       sx={{ textTransform: 'uppercase' }}
                     >
@@ -91,7 +90,6 @@ const ModularityAcknowledgement = () => {
                     </Typography>
 
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontWeight="bold"
                       fontSize={14}
                     >
@@ -100,7 +98,6 @@ const ModularityAcknowledgement = () => {
                   </Box>
                   <Box>
                     <Typography
-                      sx={{ color: 'rgba(33, 33, 33, .85)' }}
                       fontSize={25}
                       fontWeight="bold"
                     >
@@ -108,7 +105,6 @@ const ModularityAcknowledgement = () => {
                     </Typography>
                     <Typography
                       width="80%"
-                      color="rgba(33, 33, 33, .85)"
                       paragraph
                       pt={1}
                       fontSize={15}
@@ -128,7 +124,7 @@ const ModularityAcknowledgement = () => {
                       disableRipple
                       disableFocusRipple
                       className={classes.learnMoreButton}
-                      color="primary"
+                      color="secondary"
                       variant="text"
                       endIcon={<ArrowRight />}
                       sx={{
@@ -155,20 +151,18 @@ const ModularityAcknowledgement = () => {
                 className={classes.card}
                 variant="outlined"
                 elevation={0}
-                sx={{ bgcolor: 'transparent' }}
+                sx={{ border: '1px solid #fff', bgcolor: 'transparent' }}
               >
                 <CardContent
                 className={classes.modularSectionCardContent}>
                   <Box className={classes.modularCardBox}>
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontSize={13}
                       sx={{ textTransform: 'uppercase' }}
                     >
                       Decentralized Stablecoin
                     </Typography>
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontWeight="bold"
                       fontSize={14}
                     >
@@ -177,7 +171,6 @@ const ModularityAcknowledgement = () => {
                   </Box>
                   <Box>
                     <Typography
-                      sx={{ color: 'rgba(33, 33, 33, .85)' }}
                       fontSize={25}
                       fontWeight="bold"
                     >
@@ -185,7 +178,6 @@ const ModularityAcknowledgement = () => {
                     </Typography>
                     <Typography
                       width="80%"
-                      color="rgba(33, 33, 33, .85)"
                       paragraph
                       pt={1}
                       fontSize={15}
@@ -203,7 +195,7 @@ const ModularityAcknowledgement = () => {
                     }}
                   >
                     <Button
-                      color="primary"
+                      color='secondary'
                       variant="text"
                       endIcon={<ArrowRight />}
                       sx={{
@@ -235,6 +227,7 @@ const ModularityAcknowledgement = () => {
                 variant="outlined"
                 elevation={0}
                 sx={{
+                  border: '1px solid #fff',
                   backgroundColor:
                     'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
                 }}
@@ -242,14 +235,12 @@ const ModularityAcknowledgement = () => {
                 <CardContent className={classes.modularSectionCardContent}>
                   <Box className={classes.modularCardBox}>
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontSize={13}
                       sx={{ textTransform: 'uppercase' }}
                     >
                       Decentralized Justice
                     </Typography>
                     <Typography
-                      color="rgba(33, 33, 33, .85)"
                       fontWeight="bold"
                       fontSize={14}
                     >
@@ -258,7 +249,6 @@ const ModularityAcknowledgement = () => {
                   </Box>
                   <Box>
                     <Typography
-                      sx={{ color: 'rgba(33, 33, 33, .85)' }}
                       fontSize={25}
                       fontWeight="bold"
                     >
@@ -266,7 +256,6 @@ const ModularityAcknowledgement = () => {
                     </Typography>
                     <Typography
                       width="80%"
-                      color="rgba(33, 33, 33, .85)"
                       paragraph
                       pt={1}
                       fontSize={15}
@@ -283,7 +272,7 @@ const ModularityAcknowledgement = () => {
                     }}
                   >
                     <Button
-                      color="primary"
+                      color="secondary"
                       variant="text"
                       endIcon={<ArrowRight />}
                       sx={{
