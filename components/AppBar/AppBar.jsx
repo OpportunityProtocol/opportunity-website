@@ -62,7 +62,7 @@ const AppBarBar = () => {
               mx={2}
               variant="button"
             >
-              Whitepaper V1
+              Whitepaper
             </Typography>
           </Link>
           <Link href="https://github.com/OpportunityProtocol/opportunity-core">

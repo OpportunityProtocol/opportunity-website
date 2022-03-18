@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => {
             padding: '5% 12%',
             backgroundColor: '#212121',
             color: '#fff',
-            border: '1px solid #eee',
+       //     border: '1px solid #eee',
             display: 'flex',
             flexDirection: 'column'
         },

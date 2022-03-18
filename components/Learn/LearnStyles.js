@@ -5,12 +5,13 @@ const useStyles = makeStyles(() => {
    
     section: {
       padding: '5% 12%',
-      backgroundColor: '#fbfbfd',
+      backgroundColor: 'red',
     },
 
     learnCard: {
         position: 'relative',
         padding: 20,
+        width: '100%',
         minHeight: 120,
         display: 'flex',
         flexDirection: 'column',

@@ -2,6 +2,8 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import {
   ThemeProvider,
+  Box,
+  Divider,
 } from '@mui/material';
 import { themeOptions } from '../material_theme';
 import Footer from '../components/Footer/Footer';
@@ -21,9 +23,9 @@ export default function Home() {
         <AppBar />
         <Hero />
         <Learn />
-        <ModularityAcknowledgement />
         <PlatformComparison />
         <InformationalOne />
+        <ModularityAcknowledgement />
         <Footer />
       </div>
     </ThemeProvider>

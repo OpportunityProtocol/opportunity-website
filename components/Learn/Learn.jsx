@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Grid, Card, Typography, Box, Fade, IconButton } from '@mui/material'
+import { Grid, Card, Typography, Box, Fade, CardContent, IconButton } from '@mui/material'
 
 import useStyles from './LearnStyles'
 import { CallMadeSharp } from '@mui/icons-material'
@@ -121,10 +121,16 @@ const Learn = () => {
   return (
     <React.Fragment>
       <section ref={sectionRef} className={classes.section}>
-        <Typography variant="h4" color="rgba(33, 33, 33, .85)" textAlign='center'>
-          Learn the components
-        </Typography>
+      <Typography
+            color="rgba(33, 33, 33, .85)"
+            fontWeight="bold"
+            fontSize={30}
+            textAlign="center"
+          >
+            Learn the components
+          </Typography>
         <Typography
+        
           py={3}
           color="rgba(33, 33, 33, 0.85)"
           fontWeight="regular"
@@ -148,7 +154,8 @@ const Learn = () => {
                       //boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
                     }}
                   >
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Box component={CardContent} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', }}>
                       <div className={classes.iconContainer}>
                       {renderIcon(title)}
                       </div>
@@ -161,7 +168,8 @@ const Learn = () => {
                         {title}
                       </Typography>
                     </Box>
-                    <Typography py={2} fontSize={16}>{description}</Typography>
+                    <Typography py={2} fontSize={16} textAlign='center'>{description}</Typography>
+                    </Box>
                   </Card>
                 </Fade>
               </Grid>

@@ -4,7 +4,7 @@ const useStyles = makeStyles(() => {
   return {
     section: {
         height: 'auto',
-        padding: '5% 8%',
+        padding: '5% 12%',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',

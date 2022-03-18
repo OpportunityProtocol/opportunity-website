@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const options = [
   {
-    title: 'Whitepaper V1',
+    title: 'Whitepaper',
     link:
       'https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec',
   },
