@@ -5,9 +5,12 @@ const useStyles = makeStyles((theme) => {
       container: {
         backgroundColor: '#fbfbfd',
         padding: '5% 12%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       },
       card: {
-        paddingTop: 2,
+        paddingTop: 20,
       },
       cardContent: {
         display: 'flex',

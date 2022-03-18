@@ -28,9 +28,7 @@ export const themeOptions = createTheme({
       textTransform: 'none',
     },
     MuiDivider: {
-      backgroundColor: 'red',
-      color: 'red',
-      border: '1px solid red'
+
     }
   }
 });

@@ -5,7 +5,7 @@ const useStyles = makeStyles(() => {
    
     section: {
       padding: '5% 12%',
-      backgroundColor: 'red',
+      backgroundColor: '#fbfbfd',
     },
 
     learnCard: {

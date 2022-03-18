@@ -44,7 +44,7 @@ function PlatformComparison() {
             textAlign="center"
             py={5}
           >
-            How does the GigEarth compare?
+            How does GigEarth compare?
           </Typography>
       <Box
         component={Grid}
