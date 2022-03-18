@@ -1,11 +1,10 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-
 import useStyles from "../../styles/FaqStyles"
 import ExpandableTitleContent from '../../components/ExpandableTitleContent/ExpandableTitleContent'
-
 import faq from '../../json/faq.json'
 import AppBar from '../../components/AppBar/AppBar'
+
 const FrequentlyAskedQuestions = () => {
     const classes = useStyles()
 
@@ -21,7 +20,6 @@ const FrequentlyAskedQuestions = () => {
                     return  <ExpandableTitleContent key={idx} title={entry.title} description={entry.description} />
                 })
             }
-
             <Box mt={8} className={classes.bottomContainer}>
             <Typography py={3} variant='h4' fontWeight='light' color='#212121'>
                 Still have questions?

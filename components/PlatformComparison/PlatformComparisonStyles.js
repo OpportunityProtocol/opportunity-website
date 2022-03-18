@@ -3,10 +3,7 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => {
   return {
       container: {
-        bgcolor: '#fbfbfd',
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
+        backgroundColor: '#fbfbfd',
         padding: '5% 12%',
       },
       card: {

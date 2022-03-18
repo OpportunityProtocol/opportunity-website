@@ -10,15 +10,15 @@
        },
        {
         "title": "How is GigEarth different from other freelancing platforms?",
-        "description": " GigEarth is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and being deplatformed."
+        "description": " GigEarth is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and deplatformation."
        },
        {
         "title": "What do you mean user's can deploy their own markets?",
-        "description": "User's can deploy their own labor markets on GigEarth and share common data interface with the network.  This includes trust among users including employers and workers."
+        "description": "User's can deploy their own labor markets on GigEarth and share a common data interface with the network.  This includes trust among users including employers and workers."
        },
        {
         "title": "What do you mean by GigEarth seeks to be simple?",
-        "description": "Labor markets on GigEarth require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI or any other enabled currencies."
+        "description": "Labor markets on GigEarth require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI, UST or any other enabled currencies."
        }
    ]
 }

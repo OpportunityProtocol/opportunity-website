@@ -3,12 +3,12 @@ import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles(() => {
     return {
         box: {
-            width: '100vw',
             height: 'auto',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             padding: '0% 25%',
+            backgroundColor: '#fbfbfd'
         },
         bottomContainer: {
             display: 'flex',

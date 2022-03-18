@@ -43,7 +43,8 @@ function PlatformComparison() {
         justifyContent="center"
         spacing={2}
         container
-        sx={{ bgcolor: '#fbfbfd' }}
+        flexWrap='nowrap'
+        sx={{ bgcolor: '#fbfbfd', display: { xs: 'none', sm: 'none', md: 'flex' } }}
       >
         <Grid item xs={4}>
           <Card
