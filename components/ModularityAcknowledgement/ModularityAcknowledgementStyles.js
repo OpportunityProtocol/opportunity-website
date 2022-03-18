@@ -13,8 +13,8 @@ const useStyles = makeStyles(() => {
     },
 
     modularSectionCard: {
-      backgroundColor: 'transparent',
-      border: 'transparent'
+      //backgroundColor: 'transparent',
+      border: '1px solid #eee',
       //borderRadius: 15,
     },
 

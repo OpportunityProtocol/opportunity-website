@@ -36,20 +36,21 @@ const ModularityAcknowledgement = () => {
       className={classes.section}
       sx={{
         backgroundColor: '#212121',
+        color: '#fff'
       }}
     >
       <Grid flexGrow={1} container item sx={{ width: '100%' }}>
         <div className={classes.container}>
-          <Typography variant="h4" color="#fff">
+          <Typography variant="h4" color='rgba(147,227,178,1)'>
             Powered by
           </Typography>
           <Typography
             py={3}
-            color="#fff"
+            color='rgba(147,227,178,1)'
             fontWeight="regular"
             width="90%"
           >
-            GigEarth operates using existing and proven web3 protocols.
+            GigEarth is built on top existing and web3 protocols.
           </Typography>
         </div>
 
@@ -75,7 +76,7 @@ const ModularityAcknowledgement = () => {
                 variant="outlined"
                 elevation={0}
                 sx={{
-                  border: '1px solid #fff',
+                  border: '1px solid #ddd',
                   backgroundColor:
                     'transparent'
                 }}
@@ -84,16 +85,17 @@ const ModularityAcknowledgement = () => {
                   <Box className={classes.modularCardBox}>
                     <Typography
                       fontSize={13}
+                      color='rgba(147,227,178,1)'
                       sx={{ textTransform: 'uppercase' }}
                     >
-                      Decentralized Labor Markets
+                      Decentralized Social Graph
                     </Typography>
 
                     <Typography
                       fontWeight="bold"
                       fontSize={14}
                     >
-                      Exchange Tech
+                      Social Tech
                     </Typography>
                   </Box>
                   <Box>
@@ -101,7 +103,7 @@ const ModularityAcknowledgement = () => {
                       fontSize={25}
                       fontWeight="bold"
                     >
-                      GigEarth
+                      Lens Protocol
                     </Typography>
                     <Typography
                       width="80%"
@@ -109,8 +111,7 @@ const ModularityAcknowledgement = () => {
                       pt={1}
                       fontSize={15}
                     >
-                      Explore permissionless labor markets regardless of
-                      geographical location or social class
+                      Interact with a decentralized and permissionless social graph providing the basis for network building, reviews and resaleable content.
                     </Typography>
                   </Box>
                   <Box
@@ -151,13 +152,14 @@ const ModularityAcknowledgement = () => {
                 className={classes.card}
                 variant="outlined"
                 elevation={0}
-                sx={{ border: '1px solid #fff', bgcolor: 'transparent' }}
+                sx={{ border: '1px solid #ddd', bgcolor: 'transparent' }}
               >
                 <CardContent
                 className={classes.modularSectionCardContent}>
                   <Box className={classes.modularCardBox}>
                     <Typography
                       fontSize={13}
+                      color='rgba(147,227,178,1)'
                       sx={{ textTransform: 'uppercase' }}
                     >
                       Decentralized Stablecoin
@@ -227,7 +229,7 @@ const ModularityAcknowledgement = () => {
                 variant="outlined"
                 elevation={0}
                 sx={{
-                  border: '1px solid #fff',
+                  border: '1px solid #ddd',
                   backgroundColor:
                     'transparent' /*backgroundColor: (theme) => alpha(theme.palette.secondary.main, 0.3),*/ /*boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee'*/,
                 }}
@@ -236,6 +238,7 @@ const ModularityAcknowledgement = () => {
                   <Box className={classes.modularCardBox}>
                     <Typography
                       fontSize={13}
+                      color='rgba(147,227,178,1)'
                       sx={{ textTransform: 'uppercase' }}
                     >
                       Decentralized Justice

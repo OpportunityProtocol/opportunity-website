@@ -84,7 +84,7 @@ const COMPONENTS = [
   {
     title: 'Trust',
     description:
-      'Earn trust from your peers and increase your trust across markets',
+      'Earn trust from your peers by building out your social graph',
   },
 ]
 
@@ -121,46 +121,47 @@ const Learn = () => {
   return (
     <React.Fragment>
       <section ref={sectionRef} className={classes.section}>
-        <Typography variant="h4" color="rgba(33, 33, 33, .85)">
+        <Typography variant="h4" color="rgba(33, 33, 33, .85)" textAlign='center'>
           Learn the components
         </Typography>
         <Typography
           py={3}
           color="rgba(33, 33, 33, 0.85)"
           fontWeight="regular"
-          width="90%"
+          textAlign='center'
         >
-          GigEarth uses a number of components to ensure trustless markets.
+          GigEarth uses a number of components to ensure transparent markets.
         </Typography>
         <Grid container spacing={4} direction="row" alignItems="center">
           {COMPONENTS.map(({ title, description }, idx, arr) => {
             return (
               <Grid item sm={12} md={6} lg={4}>
-                <Fade in={cardsAnimated} timeout={1800 * (idx + 1)}>
+                <Fade in={cardsAnimated} timeout={900 * (idx + 1)}>
                   <Card
                     key={title}
                     classes={{
                       root: classes.learnCard,
                     }}
-                    elevation={5}
-                    variant="elevation"
+                    elevation={0}
+                    variant="elevated"
                     sx={{
-                      boxShadow:
-                        '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
+                      //boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
                     }}
                   >
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <div className={classes.iconContainer}>
                       {renderIcon(title)}
+                      </div>
                       <Typography
                         fontSize={18}
                         px={1}
-                        variant="h6"
+                        fontWeight='bold'
                         color="rgb(33, 33, 33, .85)"
                       >
                         {title}
                       </Typography>
                     </Box>
-                    <Typography fontSize={14}>{description}</Typography>
+                    <Typography py={2} fontSize={16}>{description}</Typography>
                   </Card>
                 </Fade>
               </Grid>
@@ -169,7 +170,7 @@ const Learn = () => {
         </Grid>
       </section>
 
-      <Box sx={{ py: 5 }}>
+      <Box sx={{ py: 5, bgcolor: '#fbfbfd' }}>
         <Marquee>
           {MARKETS.map((market) => {
             return (

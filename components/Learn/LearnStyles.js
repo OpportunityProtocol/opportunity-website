@@ -5,6 +5,7 @@ const useStyles = makeStyles(() => {
    
     section: {
       padding: '5% 12%',
+      backgroundColor: '#fbfbfd',
     },
 
     learnCard: {
@@ -14,7 +15,8 @@ const useStyles = makeStyles(() => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        background: 'transparent'
     },
 
     worldGridContainer: {
@@ -34,8 +36,13 @@ const useStyles = makeStyles(() => {
       border: '1px solid #eee',
     },
 
-    worldConntainer: {
-
+    iconContainer: {
+      padding: 6, 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      backgroundColor: '#eee', 
+      borderRadius: 8
     }
   };
 });

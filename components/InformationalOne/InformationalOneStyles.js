@@ -3,14 +3,14 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => {
   return {
     section: {
-        height: '100vh',
+        height: 'auto',
         padding: '5% 8%',
         display: 'flex',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
         background: 'rgb(147,227,178)',
-        background: 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,244,225,0.2455357142857143) 100%, rgba(147,227,178,1) 255%)'
+        background: 'linear-gradient(180deg, #fbfbfd 0%, rgba(213,244,225,0.2455357142857143) 30%, rgba(147,227,178,1) 255%)'
       },
       
     descriptionImage: {
@@ -47,12 +47,19 @@ const useStyles = makeStyles(() => {
       height: 'auto', 
       padding: 20
     },
-    card: {
-    //boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee',
-    },
 
     img: {
       width: '100%', height: '100%'
+    },
+    masonryImg: {
+      borderRadius: 10,
+      display: 'block',
+      width: '100%',
+    },
+    grid: {
+      position: 'relative', 
+      background: 'transparent',  
+      borderRadius: 8
     }
 
   };

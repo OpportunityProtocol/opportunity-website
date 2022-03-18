@@ -25,14 +25,11 @@ const Hero = () => {
   return (
     <section className={classes.introductionSection}>
       <Box className={classes.container}>
-        <img
-          src="/girl.jpeg"
-          className={classes.img}
-        />
-        <div className={classes.shadowyDiv}
-        >
-          <Box
+
+<Box
             sx={{
+              py: 10,
+              pb: 15,
               width: {
                 xs: '90%',
                 md: '60%'
@@ -45,10 +42,10 @@ const Hero = () => {
           >
             <Typography
               py={2}
-              color="#fff"
-              fontSize={40}
+              fontSize={50}
               fontWeight="bold"
               textAlign="center"
+              color='#212121'
             >
               The simplest way to access global and permissionless labor markets
             </Typography>
@@ -81,7 +78,16 @@ const Hero = () => {
 
             </Stack>
           </Box>
-        </div>
+
+          
+          <Card sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee', width: '80%'}}>
+          <img  
+          src="/gigearth.png"
+          className={classes.img}
+        />
+          </Card>
+
+
       </Box>
     </section>
   )
