@@ -1,10 +1,11 @@
 import { makeStyles } from "@mui/styles"
+import { darken } from '@mui/material'
 
 const useStyles = makeStyles((theme) => {
     return {
         footer: {
-            padding: '5% 12%',
-            backgroundColor: '#212121',
+            padding: '0% 12%',
+            backgroundColor: darken('#062e03', 0.82),
             color: '#fff',
        //     border: '1px solid #eee',
             display: 'flex',

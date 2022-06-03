@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-
+import { darken } from '@mui/material'
 const useStyles = makeStyles(() => {
   return {
     icon: {
@@ -8,14 +8,15 @@ const useStyles = makeStyles(() => {
       height: '50px'
     },
 
-    section: {
+    root: {
       padding: '5% 12%',
+      backgroundColor: darken('#062e03', 0.82),
+        color: '#fff',
+        height: 550,
     },
 
     modularSectionCard: {
-      //backgroundColor: 'transparent',
       border: '1px solid #eee',
-      //borderRadius: 15,
     },
 
     modularSectionCardContent: {
@@ -47,6 +48,14 @@ const useStyles = makeStyles(() => {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
+    },
+    card: {
+      border: '1px solid #ddd',
+      backgroundColor: 'transparent',
+    },
+    textButton: {
+      margin: '0px !important',
+      padding: '0px !important',
     }
   };
 });

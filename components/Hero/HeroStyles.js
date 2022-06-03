@@ -1,30 +1,32 @@
+import { darken } from '@material-ui/core';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => {
   return {
-    introductionSection: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        background: '#fbfbfd',
-        width: '100vw',
-       //background: 'linear-gradient(180deg, rgba(255,255,255,1) 8%, rgba(213,244,225,0.03545168067226889) 100%, rgba(255,255,255,1) 255%)'
+    root: {
+      width: '100%',
+      backgroundColor: darken('#062e03', 0.82),
+      minHeight: '100vh',
+      color: 'white',
     },
     container: {
-      width: '100%',
+      backgroundColor: darken('#062e03', 0.82),
+      height: 'calc(100vh - 70px)',
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'space-evenly',
+    },
+    left: {
+      display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-around',
-      padding: '80px 0px'
+      justifyContent: 'space-between',
     },
-    img: {
-      width: '100%',
-      borderRadius: 0,
+    marquee: {
+      paddingTop: 5,
+      paddingBottom: 5,
+      marginTop: 15,
+      bgcolor: 'transparent',
     },
-    button: {
-      borderRadius: 20
-    }
   };
 });
 

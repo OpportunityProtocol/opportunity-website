@@ -1,96 +1,55 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import {
-  Grid,
-  Fade,
-  Link,
-  Paper,
   Box,
-  IconButton,
+  Container,
   Typography,
-  Stack,
   Button,
-  Card,
-  CardContent,
-} from '@mui/material'
-import useStyles from './HeroStyles'
-import MarketDisplay from '../MarketDisplay/MarketDisplay'
-import Marquee from 'react-fast-marquee'
-import useInterval from 'react-useinterval'
-import AppBar from '../AppBar/AppBar'
-import { ArrowRight } from '@mui/icons-material'
+} from '@mui/material';
+import useStyles from './HeroStyles';
+import MarketDisplay from '../MarketDisplay/MarketDisplay';
+import Marquee from 'react-fast-marquee';
+import AppBar from '../AppBar/AppBar';
+import { MARKETS }from './constant'
 
 const Hero = () => {
-  const classes = useStyles()
-
+  const classes = useStyles();
   return (
-    <section className={classes.introductionSection}>
-      <Box className={classes.container}>
-
-<Box
-            sx={{
-              py: 10,
-              pb: 15,
-              width: {
-                xs: '90%',
-                md: '60%'
-              },
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Typography
-              py={2}
-              fontSize={50}
-              fontWeight="bold"
-              textAlign="center"
-              color='#212121'
-            >
-              The simplest way to access global and permissionless labor markets
+    <div className={classes.root}>
+      <AppBar />
+      <Container maxWidth="xl" className={classes.container}>
+        <Box className={classes.left}>
+          <Box width={900}>
+            <Typography fontSize={50}>
+              An integrated freelancing network to make working easier, fairer and quicker.
             </Typography>
-            <Stack direction='row' spacing={3}>
-            <Link
-              style={{ textDecoration: 'none' }}
-              href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec"
-            >
-              <Button
-                endIcon={<ArrowRight />}
-                disableElevation
-                className={classes.button}
-                color="secondary"
-                variant="contained"
-              >
-                Funding
-              </Button>
-            </Link>
-
-              <Button
-                endIcon={<ArrowRight />}
-                disableElevation
-                className={classes.button}
-                color="primary"
-                variant="contained"
-                onClick={() => ref.current.scrollIntoView()}
-              >
-                GigEarth
-              </Button>
-
-            </Stack>
+            <Typography fontSize={16} fontWeight={200}>
+              We imagine a world where internet users only have to click at max twice to create or
+              accept work and have the ability to carry and show those services across any network
+              based application.  Essentially GigEarth has the vision of becoming the cooperation
+              layer of the internet.{' '}
+              <Typography component="span" color={(theme) => theme.palette.secondary.main}>
+                Welcome to the cooperation layer of the internet.
+              </Typography>
+            </Typography>
+            <Button sx={{ mt: 2 }} variant="contained" color="secondary">
+              Preview the beta
+            </Button>
           </Box>
+          <img
+            src="/logo.png"
+            style={{ width: 300, height: 300, animation: `spin 18s linear infinite` }}
+          />
+        </Box>
+        <Box className={classes.marquee}>
+          <Marquee gradient={false}>
+            {MARKETS.map((market) => {
+              return <MarketDisplay marketTitle={market.market} related={market.related} />;
+            })}
+          </Marquee>
+        </Box>
+      </Container>
+    </div>
+  );
+};
 
-          
-          <Card sx={{ boxShadow: '0px 2px 4px -1px #eee, 0px 4px 5px 0px #eee, 0px 1px 10px 0px #eee', width: '80%'}}>
-          <img  
-          src="/gigearth.png"
-          className={classes.img}
-        />
-          </Card>
-
-
-      </Box>
-    </section>
-  )
-}
-
-export default Hero
+export default Hero;

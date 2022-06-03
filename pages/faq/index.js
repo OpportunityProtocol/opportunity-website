@@ -7,7 +7,6 @@ import AppBar from '../../components/AppBar/AppBar'
 
 const FrequentlyAskedQuestions = () => {
     const classes = useStyles()
-
     return (
         <>
         <AppBar />

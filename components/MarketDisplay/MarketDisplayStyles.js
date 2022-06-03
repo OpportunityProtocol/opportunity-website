@@ -1,12 +1,12 @@
 import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => {
+const useStyles = makeStyles(() => {
   return {
     card: {
-    height: 120,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
+      height: 120,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
       margin: '0px 15px',
       boxShadow: 'none',
       width: '300px',
