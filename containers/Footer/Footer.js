@@ -21,9 +21,6 @@ export default function Footer() {
               </Box>
               <div className={classes.column}>
               <Typography fontWeight='bold'>Explore</Typography>
-              <Link href=''>
-              <Typography className={classes.link} fontWeight="light" color='rgba(255, 255, 255, 0.6)'>Whitepaper</Typography>
-              </Link>
               <Link  href='/faq'>
               <Typography className={classes.link}  fontWeight="light" color='rgba(255, 255, 255, 0.6)'>Frequently Asked Questions</Typography>
               </Link>

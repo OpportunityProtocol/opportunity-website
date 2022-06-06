@@ -8,11 +8,6 @@ import Link from 'next/link'
 
 const options = [
   {
-    title: 'Whitepaper',
-    link:
-      'https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec',
-  },
-  {
     title: 'Discord',
     link: 'https://discord.gg/pBRVWTQPvS',
   },
