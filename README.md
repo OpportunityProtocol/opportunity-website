@@ -1,5 +1,5 @@
-# GigEarth Website
-The website for the GigEarth permissionless platform.
+# LensTalent Website
+The website for the LensTalent permissionless platform.
 
 First, run the development server:
 

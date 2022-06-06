@@ -28,11 +28,10 @@ const InformationalOne = () => {
         >
           <Grid item sx={{ py: 10 }}>
             <Typography color="white" fontWeight="bold" fontSize={30} textAlign="center">
-              A decentralized protocol for permissionless work
+            A permissionless way to earn and work for everyone
             </Typography>
             <Typography color="white" fontWeight="light" fontSize={20} py={1} textAlign="center">
-              Talent from anywhere in the world can participant regardless of geographical location
-              or social class
+            LensTalent is a decentralized freelancing protocol so anyone in the world can access it regardless of their geographical location.
             </Typography>
           </Grid>
         </Grid>

@@ -24,7 +24,7 @@ const ModularityAcknowledgement = () => {
             Powered by
           </Typography>
           <Typography py={3} color="rgba(147,227,178,1)" fontWeight="regular" width="90%">
-            GigEarth is built on top existing and web3 protocols.
+            LensTalent is built on top existing web3 protocols.
           </Typography>
         </div>
 
@@ -81,7 +81,7 @@ const ModularityAcknowledgement = () => {
                       endIcon={<ArrowRight />}
                       className={classes.textButton}
                     >
-                      Learn about GigEarth
+                      Learn about Lens Protocol
                     </Button>
                     <img src="/logo.svg" style={{ width: 30, height: 30 }} />
                   </Box>
@@ -169,7 +169,7 @@ const ModularityAcknowledgement = () => {
                     </Typography>
                     <Typography width="80%" paragraph pt={1} fontSize={15}>
                       Disputes are solved using the Kleros protocol. Users escape the bias of
-                      centralized services on GigEarth.
+                      centralized services on LensTalent.
                     </Typography>
                   </Box>
                   <Box

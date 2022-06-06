@@ -3,7 +3,7 @@ import Head from 'next/head';
 const Header = () => {
     return (
         <Head>
-        <title>GigEarth</title>
+        <title>LensTalent</title>
         <meta
           name="description"
           content="A Decentralized and Permissionless Labor Market Dapp"

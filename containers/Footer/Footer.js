@@ -10,12 +10,12 @@ export default function Footer() {
 
   return (
     <Box className={classes.footer}>
-      <Grid container direction='row' alignItems="flex-start" justifyContent="space-between">
+      <Grid pb={12} container direction='row' alignItems="flex-start" justifyContent="space-between">
           <Grid item className={classes.contentContainer}>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               <Box sx={{display: 'flex', alignItems: 'center' }}>
                 <img src='logo.svg' style={{width: 30, height: 30}} />
-              <Typography variant='h6' px={1}>GigEarth</Typography>
+              <Typography variant='h6' px={1}>LensTalent</Typography>
               </Box>
               <Typography fontWeight="light" color='rgba(255, 255, 255, 0.6)'>Permissionless labor markets</Typography>
               </Box>
@@ -51,10 +51,10 @@ export default function Footer() {
               </div>
             </Grid>
           </Grid>
-      <Divider sx={{margin: '60px 0px'}} />
-      <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <Typography fontWeight='light' py={5}>
-          Building with love for the world.  All code is open source at <Link className={classes.link} href='www.github.com/opportunityorganization'>www.github.com/opportunityorganization</Link>
+      <Divider sx={{borderBottomColor: 'rgba(255, 255, 255, 0.4)' }} />
+      <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'flex-start'}}>
+        <Typography fontWeight='400' py={5} color='rgba(255, 255, 255, 0.8)'>
+          &copy; 2022 LensTalent
         </Typography>
       </Box>
     </Box>

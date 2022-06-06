@@ -8,6 +8,7 @@ const useStyles = makeStyles(() => {
       backgroundColor: darken('#062e03', 0.82),
       minHeight: '100vh',
       color: 'white',
+      overflowX: 'hidden'
     },
     container: {
       backgroundColor: darken('#062e03', 0.82),
@@ -25,6 +26,8 @@ const useStyles = makeStyles(() => {
       paddingTop: 5,
       paddingBottom: 5,
       marginTop: 15,
+      position: 'relative',
+      top: 80,
       bgcolor: 'transparent',
     },
   };

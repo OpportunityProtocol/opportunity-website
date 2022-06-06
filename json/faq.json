@@ -1,24 +1,24 @@
 {
    "faq": [
        {
-           "title": "What is GigEarth?",
-           "description": " GigEarth is a decentralized application for permission-less labor markets where users can find work and earn money in the simplest manner.   GigEarth will be accessible through desktop and mobile clients at the end of its development.  The  GigEarth protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
+           "title": "What is LensTalent?",
+           "description": " LensTalent is a decentralized application for permission-less labor markets where users can find work and earn money in the simplest manner.   LensTalent will be accessible through desktop and mobile clients at the end of its development.  The  LensTalent protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
        },
        {
-        "title": "Is  GigEarth a decentralized application or protocol?",
-        "description": "Both.  User's can interface with the application through the GigEarth client.  Since  GigEarth is open source it can also be forked by developers for their own needs."
+        "title": "Is  LensTalent a decentralized application or protocol?",
+        "description": "Both.  User's can interface with the application through the LensTalent client.  Since  LensTalent is open source it can also be forked by developers for their own needs."
        },
        {
-        "title": "How is GigEarth different from other freelancing platforms?",
-        "description": " GigEarth is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and deplatformation."
+        "title": "How is LensTalent different from other freelancing platforms?",
+        "description": " LensTalent is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and deplatformation."
        },
        {
         "title": "What do you mean user's can deploy their own markets?",
-        "description": "User's can deploy their own labor markets on GigEarth and share a common data interface with the network.  This includes trust among users including employers and workers."
+        "description": "User's can deploy their own labor markets on LensTalent and share a common data interface with the network.  This includes trust among users including employers and workers."
        },
        {
-        "title": "What do you mean by GigEarth seeks to be simple?",
-        "description": "Labor markets on GigEarth require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI, UST or any other enabled currencies."
+        "title": "What do you mean by LensTalent seeks to be simple?",
+        "description": "Labor markets on LensTalent require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI, UST or any other enabled currencies."
        }
    ]
 }

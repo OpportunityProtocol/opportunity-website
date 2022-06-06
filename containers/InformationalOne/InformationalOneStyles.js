@@ -4,7 +4,7 @@ import { darken } from '@mui/material'
 const useStyles = makeStyles(() => {
   return {
     root: {
-        backgroundColor: darken('#062e03', 0.82), py: 10, pb: 20
+        backgroundColor: darken('#062e03', 0.82), paddingTop: 20, paddingBottom: 150
       },
     grid: {
       position: 'relative', 
