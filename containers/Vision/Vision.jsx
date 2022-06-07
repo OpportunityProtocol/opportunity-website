@@ -41,7 +41,7 @@ const Vision = () => {
               }}
             >
               <img
-                src="/lenttalent2.png"
+                src="/createcontract.png"
                 style={{
                   position: 'absolute',
                   bottom: -5,
@@ -86,7 +86,7 @@ const Vision = () => {
               }}
             >
               <img
-                src="/lenttalent2.png"
+                src="/createservice.png"
                 style={{
                   position: 'absolute',
                   bottom: -5,

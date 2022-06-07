@@ -2,7 +2,7 @@
    "faq": [
        {
            "title": "What is LensTalent?",
-           "description": " LensTalent is a decentralized application for permission-less labor markets where users can find work and earn money in the simplest manner.   LensTalent will be accessible through desktop and mobile clients at the end of its development.  The  LensTalent protocol is enabled through a set of smart contracts deployed on the Ethereum blockchain."
+           "description": "LensTalent is a decentralized and permission-less freelancing network built with LensProtocol. LensTalent allows freelancers and employers to find work or create contracts regardless of geographical location. Employers are able to create one time contracts that freelancers may accept, while freelancers are able to create long term services in which employers can invest in in order to bet on their success and quality of work. Through this method freelancers are incentivized to always provide the best quality work as it means a higher chance of passive income. Contracts and services created on LensTalent have the ability to gain exposure across any networking application that interfaces with LensProtocol. Other important features of LensTalent include one time identity creation which is persistent along  with self statistics, the ability to leverage your network through content referrals, decentralized dispute services and decentralized payouts."
        },
        {
         "title": "Is  LensTalent a decentralized application or protocol?",
@@ -10,15 +10,11 @@
        },
        {
         "title": "How is LensTalent different from other freelancing platforms?",
-        "description": " LensTalent is a user owned network of labor markets with immutable properties so user's don't experience the cons of central governance such as surprise fees and deplatformation."
-       },
-       {
-        "title": "What do you mean user's can deploy their own markets?",
-        "description": "User's can deploy their own labor markets on LensTalent and share a common data interface with the network.  This includes trust among users including employers and workers."
+        "description": " LensTalent is a user owned network of labor markets with immutable properties so user's don't experience the downfalls of centralized platforms such as surprise fees and deplatformation."
        },
        {
         "title": "What do you mean by LensTalent seeks to be simple?",
-        "description": "Labor markets on LensTalent require no unecessary onboarding documentation to start.  Simply connect a wallet and begin earning in a decentralized stablecoin such as DAI, UST or any other enabled currencies."
+        "description": "Labor markets on LensTalent require no unecessary onboarding documentation to start.  Simply connect a wallet, register and begin earning in a decentralized stablecoin such as DAI or any other enabled currencies."
        }
    ]
 }

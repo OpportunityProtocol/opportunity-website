@@ -53,17 +53,6 @@ const AppBarBar = () => {
             </Stack>
           </Grid>
           <Grid item className={classes.flexedGridItem}>
-            <Link href="https://humble-penalty-bba.notion.site/Opportunity-de5af9fb928f47288055c6c4ac2064ec">
-              <Typography
-                className={classes.link}
-                fontSize={16}
-                mx={2}
-                variant="button"
-                sx={{ textTransform: 'none' }}
-              >
-                Whitepaper
-              </Typography>
-            </Link>
             <Link href="https://github.com/OpportunityProtocol/opportunity-core">
               <Typography
                 className={classes.link}
