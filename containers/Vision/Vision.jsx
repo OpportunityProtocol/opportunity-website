@@ -18,6 +18,7 @@ const Vision = () => {
   }, []);
 
   return (
+
     <Box sx={{ height: '100vh', bgcolor: '#eee' }}>
       <Container maxWidth="xl" sx={{}}>
         <Stack
@@ -52,16 +53,22 @@ const Vision = () => {
             </Box>
             <Typography
               height={30}
-              py={2}
+              pt={2}
+              pb={1}
               fontSize={25}
               fontWeight="bold"
+            
             >
-              Instantly create contracts
+              For clients
             </Typography>
-            <Typography  height={50} paragraph fontWeight={400} color='text.secondary' fontSize={16}>
-              LensTalent provides a simple interface to quickly create, accept and work contracts. No need to provide unecessary personal information- just connect a web3 wallet and begin using the protocol.
-            </Typography>
-            <Button sx={{ mt: 2}} color='secondary' variant='contained'>
+            <Typography  height={50} mb ={3}  paragraph fontWeight={400} color='text.secondary' fontSize={16}>
+                <ul>
+                  <li>Find and hire reputable talant</li>
+                  <li>Support talant for good work</li>
+                  <li>Get paid when they get paid</li>
+                </ul>
+              </Typography>
+            <Button sx={{ mt: 3}} color='secondary' variant='contained'>
               Learn more
             </Button>
           </div>
@@ -91,16 +98,22 @@ const Vision = () => {
             </Box>
             <Typography
               height={30}
-              py={2}
+              pt={2}
+              pb={1}
               fontSize={25}
               fontWeight="bold"
+              mb={0}
             >
-              Create, sell and earn
+              For freelancers
             </Typography>
-            <Typography height={50} fontWeight={400} color='text.secondary' paragraph fontSize={16}>
-              Create services that can be advertised across any network based application on LensProtocol. Allow clients to invest in your service and earn passive income porportional to the quality of your service.
+            <Typography height={50}  mb ={3}  fontWeight={400} color='text.secondary' paragraph fontSize={16}>
+              <ul>
+                  <li>Create a profile on lens talent</li>
+                  <li>Create services that follow you through any network</li>
+                  <li>Complete work, build and leverage your network to earn passive income </li>
+              </ul>
             </Typography>
-            <Button sx={{ mt: 2}} color='secondary' variant='contained'>
+            <Button sx={{ mt: 3}} color='secondary' variant='contained'>
               Learn more
             </Button>
           </div>
